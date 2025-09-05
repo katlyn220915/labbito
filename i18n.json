@@ -1,0 +1,102 @@
+{
+  "zh": {
+    "header": {
+      "navigation": {
+        "service": "服務項目",
+        "designers": "設計團隊",
+        "about": "髮廊資訊",
+        "contact": "聯絡我們"
+      }
+    },
+    "hero": {
+      "slogan": {
+        "1": "從指尖，到髮間",
+        "2": "更好的自己，在此遇見"
+      }
+    },
+    "service": {
+      "title": "服務項目"
+    },
+    "designers": {
+      "title": "設計團隊"
+    },
+    "cat": {
+      "title": "遇見我們的貓咪",
+      "description": "我們的店貓是咖啡廳的明星，溫馴可愛的牠總是能為顧客帶來療癒的時光。"
+    },
+    "story": {
+      "title": "我們的故事",
+      "description": "從一個簡單的想法開始，我們希望創造一個讓人們可以放慢腳步、享受生活的空間。每一杯咖啡背後都有著我們對品質的堅持與對顧客的用心。"
+    },
+    "location": {
+      "title": "店舖位置",
+      "address": "地址",
+      "address.text": "東京都渋谷区代々木1-1-1<br>JR代々木駅 徒歩3分",
+      "hours": "營業時間",
+      "hours.text": "平日：8:00 - 20:00<br>假日：9:00 - 21:00"
+    },
+    "gallery": {
+      "title": "咖啡廳相簿"
+    },
+    "contact": {
+      "title": "聯絡我們",
+      "phone": "電話",
+      "email": "Email"
+    },
+    "footer": {
+      "copyright": "© 2024 RABBITO. All rights reserved."
+    }
+  },
+  "ja": {
+    "hero": {
+      "title": "RABBITOへようこそ",
+      "subtitle": "上質なコーヒーと快適な生活空間をお楽しみください"
+    },
+    "menu": {
+      "title": "メニュー",
+      "coffee": {
+        "title": "コーヒー",
+        "americano": "アメリカーノ",
+        "latte": "ラテ",
+        "cappuccino": "カプチーノ",
+        "mocha": "モカ"
+      },
+      "dessert": {
+        "title": "デザート",
+        "cheesecake": "チーズケーキ",
+        "tiramisu": "ティラミス",
+        "scone": "スコーン"
+      }
+    },
+    "about": {
+      "title": "私たちについて",
+      "description": "RABBITOは、上質なコーヒー体験を提供することに専念しているコーヒーショップです。世界各地から厳選した高品質なコーヒー豆を使用し、心を込めて一杯一杯のコーヒーを淹れ、温かく快適なお食事環境を提供いたします。"
+    },
+    "cat": {
+      "title": "私たちの猫に会いましょう",
+      "description": "当店の看板猫は、コーヒーショップのスターです。おとなしくて可愛い猫は、いつもお客様に癒しの時間をもたらしてくれます。"
+    },
+    "story": {
+      "title": "私たちのストーリー",
+      "description": "シンプルなアイデアから始まり、人々がゆっくりと過ごし、人生を楽しむことができる空間を作りたいと思いました。一杯一杯のコーヒーの背後には、品質への私たちのこだわりとお客様への思いやりがあります。"
+    },
+    "location": {
+      "title": "店舗所在地",
+      "address": "住所",
+      "address.text": "東京都渋谷区代々木1-1-1<br>JR代々木駅 徒歩3分",
+      "hours": "営業時間",
+      "hours.text": "平日：8:00 - 20:00<br>休日：9:00 - 21:00"
+    },
+    "gallery": {
+      "title": "コーヒーショップフォトギャラリー"
+    },
+    "contact": {
+      "title": "お問い合わせ",
+      "phone": "電話番号",
+      "email": "メール"
+    },
+    "footer": {
+      "copyright": "© 2024 RABBITO. All rights reserved."
+    }
+  }
+}

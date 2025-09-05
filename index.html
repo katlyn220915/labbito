@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="RABBITO - 優質咖啡廳與生活空間" />
+    <meta name="keywords" content="咖啡, 咖啡廳, RABBITO, 生活空間, 下午茶" />
+    <meta property="og:title" content="RABBITO - 優質咖啡廳" />
+    <meta property="og:description" content="享受優質咖啡與舒適生活空間的完美體驗" />
+    <meta property="og:type" content="website" />
+    <title>RABBITO - 優質咖啡廳</title>
+
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+  <body>
+    <main class="main">
+      <!-- Hero Section -->
+      <section class="hero hero__image" role="img" aria-label="主視覺圖片">
+        <header class="header">
+          <div class="header__container">
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link">
+                    <span class="text-light-brown">Service</span>
+                    <span data-i18n="header.navigation.services" class="text-cjk">服務項目</span>
+                  </a>
+                  >
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link" class="header__nav-link">
+                    <span class="text-light-brown">Designers</span>
+                    <span data-i18n="header.navigation.designers" class="text-serif">設計團隊</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link" class="header__nav-link">
+                    <span class="text-light-brown">About</span>
+                    <span data-i18n="header.navigation.about" class="text-cjk">髮廊資訊</span>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="#" class="header__nav-link" class="header__nav-link">
+                    <span class="text-light-brown">Contact</span>
+                    <span data-i18n="header.navigation.contact" class="text-cjk">聯絡我們</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="language-switcher">
+              <button class="language-switcher__btn text-serif">Language<span>▼</span></button>
+              <!-- <div>
+                <button
+                  class="language-switcher__btn language-switcher__btn--active"
+                  data-lang="zh"
+                >
+                  中文
+                </button>
+                <button class="language-switcher__btn" data-lang="ja">日本語</button>
+              </div> -->
+            </div>
+          </div>
+        </header>
+        <div class="hero__content">
+          <h1 class="hero__title sr-only">LAbbito</h1>
+          <img src="./assets/images/LAbbito.svg" alt="LAbbito" class="hero__logo-image" />
+          <img src="./assets/images/slogan.svg" alt="Hair Salon" class="hero__subtitle-image" />
+          <p class="hero__slogan text-cjk">
+            <span data-i18n="hero.slogan.1">從指尖，到髮間</span>
+            <img
+              src="./assets/images/icons/scissors-light-brown.png"
+              alt="icon-scissors"
+              class="icon"
+            />
+            <span data-i18n="hero.slogan.2">更好的自己，在此遇見</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Service Section -->
+      <section class="service">
+        <div class="service__container">
+          <div class="service__header">
+            <header class="section-header">
+              <div class="section-header__content">
+                <img
+                  src="./assets/images/section-headers/service.svg"
+                  alt="service"
+                  class="section-header__title-image"
+                />
+                <h2 class="section-header__title text-cjk" data-i18n="service.title">服務項目</h2>
+              </div>
+              <img src="./assets/images/logo-brown.svg" alt="logo" class="section-header__logo" />
+            </header>
+          </div>
+
+          <div class="service__content">
+            <ul class="service__items">
+              <li class="service__item">
+                <div class="service__item-header">
+                  <div class="service__item-title-container">
+                    <h3
+                      data-i18n="service.cut"
+                      class="service__item-title text-cjk text-primary-green"
+                    >
+                      剪髮
+                    </h3>
+                    <span class="service__category-title text-script">Cut</span>
+                  </div>
+                  <span class="service__item-title-decorate"></span>
+                  <img src="./assets/images/icons/scissors-green.png" alt="cut" class="icon" />
+                </div>
+                <div class="service__item-content">
+                  <table class="service__pricing-table">
+                    <tbody>
+                      <tr>
+                        <td class="service__table-service text-cjk">設計師剪髮 (含洗)</td>
+                        <td class="service__table-price"></td>
+                        <td class="service__table-price"></td>
+                        <td class="service__table-price">800 起</td>
+                      </tr>
+                      <tr>
+                        <td class="service__table-service text-cjk">日籍設計師剪髮 (含洗)</td>
+                        <td class="service__table-price"></td>
+                        <td class="service__table-price"></td>
+                        <td class="service__table-price">1600 起</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+
+              <li class="service__item">
+                <div class="service__item-header">
+                  <div class="service__item-title-container">
+                    <h3
+                      data-i18n="service.cut"
+                      class="service__item-title text-cjk text-primary-green"
+                    >
+                      染髮
+                    </h3>
+                    <span class="service__category-title text-script">Color</span>
+                  </div>
+                  <span class="service__item-title-decorate"></span>
+                  <img src="./assets/images/icons/scissors-green.png" alt="cut" class="icon" />
+                </div>
+                <div class="service__item-content">
+                  <table class="service__pricing-table">
+                    <thead>
+                      <tr>
+                        <th class="service__table-header"></th>
+                        <th class="service__table-header text-cjk">S</th>
+                        <th class="service__table-header text-cjk">M</th>
+                        <th class="service__table-header text-cjk">L</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="service__table-service text-cjk">單色染頭</td>
+                        <td class="service__table-price">2200</td>
+                        <td class="service__table-price">2400</td>
+                        <td class="service__table-price">2600</td>
+                      </tr>
+                      <tr>
+                        <td class="service__table-service text-cjk">全頭挑染</td>
+                        <td class="service__table-price">2200</td>
+                        <td class="service__table-price">2400</td>
+                        <td class="service__table-price">2600</td>
+                      </tr>
+                      <tr>
+                        <td class="service__table-service text-cjk">設計挑染</td>
+                        <td class="service__table-price">900</td>
+                        <td class="service__table-price">1000</td>
+                        <td class="service__table-price">1100</td>
+                      </tr>
+                      <tr>
+                        <td class="service__table-service text-cjk">髮根補色</td>
+                        <td class="service__table-price">-</td>
+                        <td class="service__table-price">-</td>
+                        <td class="service__table-price">1500 起</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+
+              <li class="service__item">
+                <div class="service__item-header">
+                  <div class="service__item-title-container">
+                    <h3
+                      data-i18n="service.perm"
+                      class="service__item-title text-cjk text-primary-green"
+                    >
+                      燙髮
+                    </h3>
+                    <span class="service__category-title text-script">Perm</span>
+                  </div>
+                  <span class="service__item-title-decorate"></span>
+                  <img src="./assets/images/icons/scissors-green.png" alt="perm" class="icon" />
+                </div>
+                <div class="service__item-content">
+                  <table class="service__pricing-table">
+                    <thead>
+                      <tr>
+                        <th class="service__table-header"></th>
+                        <th class="service__table-header text-cjk">S</th>
+                        <th class="service__table-header text-cjk">M</th>
+                        <th class="service__table-header text-cjk">L</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="service__table-service text-cjk">冷燙燙捲</td>
+                        <td class="service__table-price">2200</td>
+                        <td class="service__table-price">2400</td>
+                        <td class="service__table-price">2600</td>
+                      </tr>
+                      <tr>
+                        <td class="service__table-service text-cjk">溫塑燙捲</td>
+                        <td class="service__table-price">3000</td>
+                        <td class="service__table-price">3200</td>
+                        <td class="service__table-price">3400</td>
+                      </tr>
+                      <tr>
+                        <td class="service__table-service text-cjk">熱塑燙捲</td>
+                        <td class="service__table-price">3300</td>
+                        <td class="service__table-price">3500</td>
+                        <td class="service__table-price">3700</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+
+              <li class="service__item">
+                <div class="service__item-header">
+                  <div class="service__item-title-container">
+                    <h3
+                      data-i18n="service.straight"
+                      class="service__item-title text-cjk text-primary-green"
+                    >
+                      燙直
+                    </h3>
+                    <span class="service__category-title text-script">Straight</span>
+                  </div>
+                  <span class="service__item-title-decorate"></span>
+                  <img src="./assets/images/icons/scissors-green.png" alt="straight" class="icon" />
+                </div>
+                <div class="service__item-content">
+                  <table class="service__pricing-table">
+                    <thead>
+                      <tr>
+                        <th class="service__table-header"></th>
+                        <th class="service__table-header text-cjk">S</th>
+                        <th class="service__table-header text-cjk">M</th>
+                        <th class="service__table-header text-cjk">L</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="service__table-service text-cjk">燙直 (縮毛矯正)</td>
+                        <td class="service__table-price">2800</td>
+                        <td class="service__table-price">3100</td>
+                        <td class="service__table-price">3400</td>
+                      </tr>
+                      <tr>
+                        <td class="service__table-service text-cjk">髮根燙直</td>
+                        <td class="service__table-price">-</td>
+                        <td class="service__table-price">-</td>
+                        <td class="service__table-price">2500 起</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+
+              <li class="service__item">
+                <div class="service__item-header">
+                  <div class="service__item-title-container">
+                    <h3
+                      data-i18n="service.treatment"
+                      class="service__item-title text-cjk text-primary-green"
+                    >
+                      護髮
+                    </h3>
+                    <span class="service__category-title text-script">Treatment</span>
+                  </div>
+                  <span class="service__item-title-decorate"></span>
+                  <img
+                    src="./assets/images/icons/scissors-green.png"
+                    alt="treatment"
+                    class="icon"
+                  />
+                </div>
+                <div class="service__item-content">
+                  <table class="service__pricing-table">
+                    <thead>
+                      <tr>
+                        <th class="service__table-header"></th>
+                        <th class="service__table-header text-cjk">S</th>
+                        <th class="service__table-header text-cjk">M</th>
+                        <th class="service__table-header text-cjk">L</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="service__table-service text-cjk">深層護髮</td>
+                        <td class="service__table-price">1000</td>
+                        <td class="service__table-price">1200</td>
+                        <td class="service__table-price">1400</td>
+                      </tr>
+                      <tr>
+                        <td class="service__table-service text-cjk">髮質修護</td>
+                        <td class="service__table-price">1200</td>
+                        <td class="service__table-price">1500</td>
+                        <td class="service__table-price">1800</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="service__note text-cjk">※染/燙搭配護髮可折抵200元</div>
+                </div>
+              </li>
+
+              <li class="service__item">
+                <div class="service__item-header">
+                  <div class="service__item-title-container">
+                    <h3
+                      data-i18n="service.other"
+                      class="service__item-title text-cjk text-primary-green"
+                    >
+                      其他
+                    </h3>
+                    <span class="service__category-title text-script">Other</span>
+                  </div>
+                  <span class="service__item-title-decorate"></span>
+                  <img src="./assets/images/icons/scissors-green.png" alt="other" class="icon" />
+                </div>
+                <div class="service__item-content">
+                  <table class="service__pricing-table">
+                    <thead>
+                      <tr>
+                        <th class="service__table-header"></th>
+                        <th class="service__table-header text-cjk">S</th>
+                        <th class="service__table-header text-cjk">M</th>
+                        <th class="service__table-header text-cjk">L</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="service__table-service text-cjk">頭皮護理</td>
+                        <td class="service__table-price">800</td>
+                        <td class="service__table-price">800</td>
+                        <td class="service__table-price">1000</td>
+                      </tr>
+                      <tr>
+                        <td class="service__table-service text-cjk">洗髮</td>
+                        <td class="service__table-price">-</td>
+                        <td class="service__table-price">-</td>
+                        <td class="service__table-price">400</td>
+                      </tr>
+                      <tr>
+                        <td class="service__table-service text-cjk">半頭造型</td>
+                        <td class="service__table-price">-</td>
+                        <td class="service__table-price">-</td>
+                        <td class="service__table-price">800 起</td>
+                      </tr>
+                      <tr>
+                        <td class="service__table-service text-cjk">整頭造型</td>
+                        <td class="service__table-price">-</td>
+                        <td class="service__table-price">-</td>
+                        <td class="service__table-price">1000 起</td>
+                      </tr>
+                      <tr>
+                        <td class="service__table-service text-cjk">重點妝</td>
+                        <td class="service__table-price">-</td>
+                        <td class="service__table-price">-</td>
+                        <td class="service__table-price">300 起</td>
+                      </tr>
+                      <tr>
+                        <td class="service__table-service text-cjk">全妝</td>
+                        <td class="service__table-price">-</td>
+                        <td class="service__table-price">-</td>
+                        <td class="service__table-price">700 起</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="service__decoration"></div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="designers">
+        <div class="designers__container">
+          <header class="section-header">
+            <div class="section-header__content">
+              <img
+                src="./assets/images/section-headers/designers.svg"
+                alt="service"
+                class="section-header__title-image"
+              />
+              <h2 class="section-header__title text-cjk" data-i18n="designers.title">設計團隊</h2>
+            </div>
+            <img src="./assets/images/logo-brown.svg" alt="logo" class="section-header__logo" />
+          </header>
+
+          <div class="designers__carousel">
+            <button class="carousel__nav carousel__nav--prev" aria-label="Previous designer">
+              <img
+                src="./assets/images/icons/arrow-left.svg"
+                alt="Previous"
+                class="carousel__arrow"
+              />
+            </button>
+
+            <div class="carousel__content">
+              <div class="designer__card">
+                <div class="designer__info">
+                  <h3 class="text-cjk">
+                    <span class="designer__title">設計總監</span>
+                    <span class="designer__name text-cjk">藤森篤</span>
+                  </h3>
+                  <p class="designer__handle text-serif">
+                    作品集 @labbitosalon
+                    <img
+                      src="./assets/images/icons/instagram.png"
+                      alt="Instagram"
+                      class="social-icon"
+                    />
+                  </p>
+                </div>
+                <div class="designer__photo">
+                  <img
+                    src="./assets/images/designers/fujimori/fujimori.jpg"
+                    alt="藤森篤"
+                    class="designer__image-photo"
+                  />
+                </div>
+              </div>
+              <div class="designer__card_background"></div>
+            </div>
+
+            <button class="carousel__nav carousel__nav--next" aria-label="Next designer">
+              <img src="./assets/images/icons/arrow-right.svg" alt="Next" class="carousel__arrow" />
+            </button>
+          </div>
+
+          <div class="designer__gallery">
+            <img
+              src="./assets/images/designers/fujimori/portfolio-1.jpg"
+              alt="藤森篤作品集1"
+              class="designer__image"
+            />
+            <img
+              src="./assets/images/designers/fujimori/portfolio-2.jpg"
+              alt="藤森篤作品集2"
+              class="designer__image"
+            />
+            <img
+              src="./assets/images/designers/fujimori/portfolio-3.jpg"
+              alt="藤森篤作品集3"
+              class="designer__image"
+            />
+            <img
+              src="./assets/images/designers/fujimori/portfolio-4.jpg"
+              alt="藤森篤作品集4"
+              class="designer__image"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="mascot">
+        <div class="mascot__decoration mascot__decoration--top"></div>
+        <div class="mascot__container">
+          <div class="mascot__photo">
+            <img src="./assets/images/lulu.png" alt="店貓嚕嚕" class="mascot__image-photo" />
+          </div>
+          <div class="mascot__intro">
+            <div class="mascot__logo-container">
+              <img src="./assets/images/LAbbito-brown.svg" alt="logo" class="mascot__logo" />
+              <h4 class="mascot__title" data-i18n="mascot.title">店貓</h4>
+            </div>
+            <p>
+              <span class="mascot__name-prefix" data-i18n="mascot.name-prefix">理事長</span>
+              <span class="mascot__name" data-i18n="mascot.name">嚕嚕</span>
+            </p>
+          </div>
+        </div>
+        <div class="mascot__decoration mascot__decoration--bottom"></div>
+      </section>
+
+      <!-- Story Section -->
+      <section class="story">
+        <div class="story__container">
+          <div class="story__content">
+            <h2 class="story__title text-cjk" data-i18n="story.title">我們的故事</h2>
+            <p class="story__description text-cjk" data-i18n="story.description">
+              從一個簡單的想法開始，我們希望創造一個讓人們可以放慢腳步、享受生活的空間。
+              每一杯咖啡背後都有著我們對品質的堅持與對顧客的用心。
+            </p>
+          </div>
+          <div class="image-placeholder story__image" role="img" aria-label="咖啡廳故事圖片">
+            <span class="image-placeholder__text">故事圖片 - 建議尺寸: 600x400</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Location Section -->
+      <section class="location">
+        <div class="location__container">
+          <h2 class="location__title text-cjk" data-i18n="location.title">店舖位置</h2>
+          <div class="location__content">
+            <div class="location__info">
+              <div class="location__address">
+                <h3 class="location__info-title text-cjk" data-i18n="location.address">地址</h3>
+                <p class="location__info-text text-cjk" data-i18n="location.address.text">
+                  東京都渋谷区代々木1-1-1<br />
+                  JR代々木駅 徒歩3分
+                </p>
+              </div>
+              <div class="location__hours">
+                <h3 class="location__info-title text-cjk" data-i18n="location.hours">營業時間</h3>
+                <p class="location__info-text text-cjk" data-i18n="location.hours.text">
+                  平日：8:00 - 20:00<br />
+                  假日：9:00 - 21:00
+                </p>
+              </div>
+            </div>
+            <div class="image-placeholder location__map" role="img" aria-label="地圖">
+              <span class="image-placeholder__text">地圖 - 建議尺寸: 500x300</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="gallery">
+        <div class="gallery__container">
+          <h2 class="gallery__title text-cjk" data-i18n="gallery.title">咖啡廳相簿</h2>
+          <div class="gallery__grid">
+            <div class="image-placeholder gallery__item" role="img" aria-label="咖啡廳照片1">
+              <span class="image-placeholder__text">照片1 - 建議尺寸: 300x200</span>
+            </div>
+            <div class="image-placeholder gallery__item" role="img" aria-label="咖啡廳照片2">
+              <span class="image-placeholder__text">照片2 - 建議尺寸: 300x200</span>
+            </div>
+            <div class="image-placeholder gallery__item" role="img" aria-label="咖啡廳照片3">
+              <span class="image-placeholder__text">照片3 - 建議尺寸: 300x200</span>
+            </div>
+            <div class="image-placeholder gallery__item" role="img" aria-label="咖啡廳照片4">
+              <span class="image-placeholder__text">照片4 - 建議尺寸: 300x200</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact">
+        <div class="contact__container">
+          <div class="contact__info">
+            <h2 class="contact__title text-cjk" data-i18n="contact.title">聯絡我們</h2>
+            <div class="contact__details">
+              <div class="contact__item">
+                <span class="contact__label text-cjk" data-i18n="contact.phone">電話</span>
+                <span class="contact__value">03-1234-5678</span>
+              </div>
+              <div class="contact__item">
+                <span class="contact__label text-cjk" data-i18n="contact.email">Email</span>
+                <span class="contact__value">info@rabbito.com</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact__icons">
+            <div class="contact__icon-item">
+              <div class="image-placeholder contact__icon" role="img" aria-label="電話圖標">
+                <span class="image-placeholder__text">電話圖標</span>
+              </div>
+            </div>
+            <div class="contact__icon-item">
+              <div class="image-placeholder contact__icon" role="img" aria-label="Email圖標">
+                <span class="image-placeholder__text">Email圖標</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__container">
+        <p class="footer__copyright text-cjk" data-i18n="footer.copyright">
+          © 2024 RABBITO. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
