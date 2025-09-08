@@ -107,7 +107,7 @@ function initLanguageSwitcher() {
 
   // Set initial language display
   updateLanguageOptions();
-  
+
   // Expose updateLanguageOptions globally for i18n system
   window.updateLanguageOptions = updateLanguageOptions;
 }
@@ -260,23 +260,28 @@ function initCarousel() {
   // Designer data with portfolio images
   const designers = [
     {
+      folderName: 'fujimori',
       name: 'fujimori',
       portfolioCount: 4,
     },
     {
-      name: 'flora',
+      folderName: 'flora',
+      name: 'Flora',
       portfolioCount: 4,
     },
     {
-      name: 'haler',
+      folderName: 'haler',
+      name: 'Haler',
       portfolioCount: 4,
     },
     {
+      folderName: 'nana',
       name: 'nana',
       portfolioCount: 4,
     },
     {
-      name: 'caleb',
+      folderName: 'caleb',
+      name: 'Caleb',
       portfolioCount: 4,
     },
   ];
@@ -313,7 +318,7 @@ function initCarousel() {
       // Generate new portfolio images
       for (let i = 1; i <= designer.portfolioCount; i++) {
         const img = document.createElement('img');
-        img.src = `./assets/images/designers/${designer.name}/${designer.name}-portfolio-${i}.jpg`;
+        img.src = `./assets/images/designers/${designer.folderName}/${designer.name}-portfolio-${i}.jpg`;
         img.alt = `${designer.name}作品集${i}`;
         img.className = 'designer__image';
         galleryContainer.appendChild(img);
