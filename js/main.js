@@ -7,16 +7,49 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function initLanguageSwitcher() {
-  const languageButtons = document.querySelectorAll('.language-switcher__btn');
+  const toggleButton = document.getElementById('language-toggle');
+  const dropdown = document.getElementById('language-dropdown');
+  const currentLanguageSpan = document.querySelector('.current-language');
+  const languageOptions = document.querySelectorAll('.language-switcher__option');
 
-  languageButtons.forEach((button) => {
-    button.addEventListener('click', function () {
-      const lang = this.getAttribute('data-lang');
+  // Toggle dropdown
+  toggleButton.addEventListener('click', function (e) {
+    e.stopPropagation();
+    dropdown.classList.toggle('show');
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', function (e) {
+    if (!toggleButton.contains(e.target) && !dropdown.contains(e.target)) {
+      dropdown.classList.remove('show');
+    }
+  });
+
+  // Handle language selection
+  languageOptions.forEach((option) => {
+    option.addEventListener('click', function () {
+      const selectedLang = this.getAttribute('data-lang');
+      const selectedText = this.textContent;
+      
+      // Update the current language display
+      currentLanguageSpan.textContent = selectedText;
+      
+      // Close dropdown
+      dropdown.classList.remove('show');
+      
+      // Switch language using i18n
       if (window.i18n) {
-        window.i18n.setLanguage(lang);
+        window.i18n.setLanguage(selectedLang);
       }
     });
   });
+
+  // Set initial language display
+  if (window.i18n) {
+    const currentLang = window.i18n.getCurrentLanguage();
+    const langMap = { 'zh': '中文', 'ja': '日本語' };
+    currentLanguageSpan.textContent = langMap[currentLang] || 'Language';
+  }
 }
 
 function initSmoothScrolling() {
@@ -36,63 +69,6 @@ function initSmoothScrolling() {
       }
     });
   });
-}
-
-function initImagePlaceholders() {
-  const placeholders = document.querySelectorAll('.image-placeholder');
-
-  placeholders.forEach((placeholder) => {
-    placeholder.addEventListener('click', function () {
-      const text = this.querySelector('.image-placeholder__text');
-      if (text) {
-        text.style.opacity = text.style.opacity === '0' ? '0.7' : '0';
-        setTimeout(() => {
-          text.style.opacity = '0.7';
-        }, 2000);
-      }
-    });
-  });
-}
-
-function initMenuItemHovers() {
-  const menuItems = document.querySelectorAll('.menu__item');
-
-  menuItems.forEach((item) => {
-    item.addEventListener('mouseenter', function () {
-      this.style.backgroundColor = 'rgba(103, 123, 70, 0.1)';
-      this.style.transform = 'translateX(5px)';
-      this.style.transition = 'all 0.3s ease';
-    });
-
-    item.addEventListener('mouseleave', function () {
-      this.style.backgroundColor = 'transparent';
-      this.style.transform = 'translateX(0)';
-    });
-  });
-}
-
-function initGalleryHovers() {
-  const galleryItems = document.querySelectorAll('.gallery__item');
-
-  galleryItems.forEach((item) => {
-    item.addEventListener('mouseenter', function () {
-      this.style.filter = 'brightness(1.1) saturate(1.2)';
-      this.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.2)';
-    });
-
-    item.addEventListener('mouseleave', function () {
-      this.style.filter = 'none';
-      this.style.boxShadow = 'none';
-    });
-  });
-}
-
-function handleContactIconClick(type) {
-  if (type === 'phone') {
-    window.location.href = 'tel:03-1234-5678';
-  } else if (type === 'email') {
-    window.location.href = 'mailto:info@rabbito.com';
-  }
 }
 
 // window.addEventListener('scroll', function() {

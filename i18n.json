@@ -15,18 +15,62 @@
       }
     },
     "service": {
-      "title": "服務項目"
+      "title": "服務項目",
+      "cut": {
+        "title": "剪髮",
+        "stylist_haircut": "設計師剪髮 (含洗)",
+        "japanese_stylist_haircut": "日籍設計師剪髮 (含洗)"
+      },
+      "color": {
+        "title": "染髮",
+        "full_color": "單色染頭",
+        "full_highlights": "全頭挑染",
+        "design_highlights": "設計挑染",
+        "retouch_color": "髮根補色"
+      },
+      "perm": {
+        "title": "燙髮",
+        "cold_perm": "冷燙燙捲",
+        "warm_perm": "溫塑燙捲",
+        "digital_perm": "熱塑燙捲"
+      },
+      "straight": {
+        "title": "燙直",
+        "straight_perm": "燙直 (縮毛矯正)",
+        "root_straight": "髮根燙直"
+      },
+      "treatment": {
+        "title": "護髮",
+        "deep_conditioning": "深層護髮",
+        "repair_restorative": "髮質修護",
+        "discount_note": "※染/燙搭配護髮可折抵200元"
+      },
+      "other": {
+        "title": "其他",
+        "head_spa": "頭皮護理",
+        "shampoo_blowdry": "洗髮",
+        "half_hair_setup": "半頭造型",
+        "full_hair_setup": "整頭造型",
+        "point_makeup": "重點妝",
+        "full_makeup": "全妝"
+      }
     },
     "designers": {
       "title": "設計團隊"
     },
-    "cat": {
-      "title": "遇見我們的貓咪",
-      "description": "我們的店貓是咖啡廳的明星，溫馴可愛的牠總是能為顧客帶來療癒的時光。"
+    "about": {
+      "title": "髮廊資訊",
+      "text1": "LAbbito hair salon設計總監 藤森篤四度遠赴英國進修，2009年在台中創立屬於自己的日式沙龍。",
+      "text2": "店內不僅有專業培訓的台灣設計師，還提供日文翻譯，讓在台灣的日本客人也能安心溝通、自在享受。",
+      "text3": "從髮質出發，重視每一縷髮絲的質感與健康，為每位客人量身打造最適合的風格。",
+      "text4": "我們相信髮型不只是外表的呈現，而是能展現個人自然魅力的美重元素。"
     },
-    "story": {
-      "title": "我們的故事",
-      "description": "從一個簡單的想法開始，我們希望創造一個讓人們可以放慢腳步、享受生活的空間。每一杯咖啡背後都有著我們對品質的堅持與對顧客的用心。"
+    "career": {
+      "title": "品牌旗下事業",
+      "pasta_restaurant": "義大利麵餐廳",
+      "pasta_restaurant.subtitle": "Pasta LAbbito",
+      "plant_display": "空間規劃",
+      "plant_display.subtitle": "LAbbito Old&Green"
     },
     "location": {
       "title": "店舖位置",
@@ -48,52 +92,105 @@
     }
   },
   "ja": {
-    "hero": {
-      "title": "RABBITOへようこそ",
-      "subtitle": "上質なコーヒーと快適な生活空間をお楽しみください"
-    },
-    "menu": {
-      "title": "メニュー",
-      "coffee": {
-        "title": "コーヒー",
-        "americano": "アメリカーノ",
-        "latte": "ラテ",
-        "cappuccino": "カプチーノ",
-        "mocha": "モカ"
-      },
-      "dessert": {
-        "title": "デザート",
-        "cheesecake": "チーズケーキ",
-        "tiramisu": "ティラミス",
-        "scone": "スコーン"
+    "header": {
+      "navigation": {
+        "service": "メニュー",
+        "designers": "スタッフ",
+        "about": "店舗情報",
+        "contact": "お問合せ"
       }
     },
+    "hero": {
+      "title": "RABBITOへようこそ",
+      "subtitle": "上質なコーヒーと快適な生活空間をお楽しみください",
+      "slogan": {
+        "1": "指先から、毛先まで",
+        "2": "より素敵な私、ここに出逢う"
+      }
+    },
+    "service": {
+      "title": "メニュー",
+      "cut": {
+        "title": "カット",
+        "stylist_haircut": "Stylist haircut",
+        "japanese_stylist_haircut": "Japanese stylist haircut"
+      },
+      "color": {
+        "title": "カラー",
+        "full_color": "Full color",
+        "full_highlights": "Full Highlights",
+        "design_highlights": "Design Highlights",
+        "retouch_color": "Retouch color"
+      },
+      "perm": {
+        "title": "パーマ",
+        "cold_perm": "Cold Perm",
+        "warm_perm": "Warm Perm",
+        "digital_perm": "Digital Perm"
+      },
+      "straight": {
+        "title": "ストレート",
+        "straight_perm": "Straight perm",
+        "root_straight": "Root Straight"
+      },
+      "treatment": {
+        "title": "トリートメント",
+        "deep_conditioning": "Deep Conditioning Treatment",
+        "repair_restorative": "Repair / Restorative Treatment",
+        "discount_note": "※Get NT$200 discount on Treatment when combined with Color or Perm."
+      },
+      "other": {
+        "title": "その他",
+        "head_spa": "Head Spa",
+        "shampoo_blowdry": "Shampoo & Blow-dry",
+        "half_hair_setup": "Half hair Set-up",
+        "full_hair_setup": "Full hair Set-up",
+        "point_makeup": "Point makeup",
+        "full_makeup": "Full makeup"
+      }
+    },
+    "designers": {
+      "title": "スタッフ"
+    },
     "about": {
-      "title": "私たちについて",
-      "description": "RABBITOは、上質なコーヒー体験を提供することに専念しているコーヒーショップです。世界各地から厳選した高品質なコーヒー豆を使用し、心を込めて一杯一杯のコーヒーを淹れ、温かく快適なお食事環境を提供いたします。"
+      "title": "店舗情報",
+      "text1": "LAbbito hair salon総クリエイティブディレクター 藤森篤は4回英国進学し、2009年に台中で独自のJapan Styleのヘアサロンを設立。",
+      "text2": "サロン内には、専門的な訓練を受けた台湾人スタイリストが在籍、日本語通訳スタッフもあり、台湾在住の日本人のお客様も安心してコミュニケーションできるリラックスして頂けます。",
+      "text3": "髪質を始め、一本一本の髪の毛の美しさと健康を大切にし、お客様一人ひとりに最も似合うスタイルをご提案。",
+      "text4": "ヘアスタイルは単なる外見ではなく、自然な魅力を引き出す大切な要素。"
     },
-    "cat": {
-      "title": "私たちの猫に会いましょう",
-      "description": "当店の看板猫は、コーヒーショップのスターです。おとなしくて可愛い猫は、いつもお客様に癒しの時間をもたらしてくれます。"
-    },
-    "story": {
-      "title": "私たちのストーリー",
-      "description": "シンプルなアイデアから始まり、人々がゆっくりと過ごし、人生を楽しむことができる空間を作りたいと思いました。一杯一杯のコーヒーの背後には、品質への私たちのこだわりとお客様への思いやりがあります。"
+    "career": {
+      "title": "関連事業",
+      "pasta_restaurant": "パスタレストラン",
+      "pasta_restaurant.subtitle": "Pasta LAbbito",
+      "plant_display": "植物とディスプレイ",
+      "plant_display.subtitle": "LAbbito Old&Green"
     },
     "location": {
       "title": "店舗所在地",
       "address": "住所",
       "address.text": "東京都渋谷区代々木1-1-1<br>JR代々木駅 徒歩3分",
       "hours": "営業時間",
-      "hours.text": "平日：8:00 - 20:00<br>休日：9:00 - 21:00"
+      "hours.text": "11:00-19:00(定休日月曜日)",
+      "salon_address": "サロン住所",
+      "salon_address.text": "台中市西區中興街122巷12號1樓",
+      "booking": "予約こちら (日本語対応可)"
     },
     "gallery": {
       "title": "コーヒーショップフォトギャラリー"
     },
     "contact": {
-      "title": "お問い合わせ",
+      "title": "お問合せ",
       "phone": "電話番号",
-      "email": "メール"
+      "email": "メール",
+      "company_name": "会社名",
+      "company_name.text": "圓可有限公司",
+      "tax_id": "統一編号",
+      "tax_id.text": "24268837",
+      "email_address": "E-mail",
+      "email_address.text": "labbitosalon@yahoo.com.tw",
+      "phone_number": "電話番号",
+      "phone_number.text": "04-2302-0522"
     },
     "footer": {
       "copyright": "© 2024 RABBITO. All rights reserved."
