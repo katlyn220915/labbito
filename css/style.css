@@ -961,7 +961,6 @@ ul {
 .location__hours,
 .location__address {
   display: flex;
-  gap: var(--spacing-xs);
 }
 
 .location__label {

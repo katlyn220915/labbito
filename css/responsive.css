@@ -378,6 +378,10 @@ body.menu-open {
   .carousel__nav--next {
     right: 10px;
   }
+
+  .location__wrapper {
+    padding: var(--spacing-md);
+  }
 }
 
 /* Mobile Styles */
