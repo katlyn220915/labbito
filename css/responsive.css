@@ -232,6 +232,11 @@ body.menu-open {
     flex-direction: column;
   }
 
+  .booking__btn {
+    width: fit-content;
+    align-self: center;
+  }
+
   .contact__bg {
     display: none;
   }
