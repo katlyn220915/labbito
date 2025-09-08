@@ -21,6 +21,20 @@
   }
 }
 
+/* Hero blur fade-in animation */
+@keyframes heroBlurFadeIn {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
+
 /* Base styles for animated sections */
 .animate-section {
   opacity: 0;
@@ -87,12 +101,61 @@
   transition-delay: 0.2s;
 }
 
+/* Designer gallery animations with staggered delays */
+.designer__image.animate-on-scroll {
+  transition-delay: 0.1s;
+}
+
+.designer__image:nth-child(2).animate-on-scroll {
+  transition-delay: 0.2s;
+}
+
+.designer__image:nth-child(3).animate-on-scroll {
+  transition-delay: 0.3s;
+}
+
+.designer__image:nth-child(4).animate-on-scroll {
+  transition-delay: 0.4s;
+}
+
+/* Carousel gallery transition animations */
+.designer__gallery {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.designer__image {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
 .about__info.animate-on-scroll {
   transition-delay: 0.2s;
 }
 
 .salon__image.animate-on-scroll {
   transition-delay: 0.1s;
+}
+
+/* Mascot image animation */
+.mascot__image-photo.animate-on-scroll {
+  transition-delay: 0.2s;
+}
+
+/* Hero animations */
+.hero-animate {
+  opacity: 0;
+  animation: heroBlurFadeIn 1.5s ease-out forwards;
+}
+
+.hero__logo-image.hero-animate {
+  animation-delay: 0.3s;
+}
+
+.hero__subtitle-image.hero-animate {
+  animation-delay: 0.8s;
+}
+
+.hero__slogan.hero-animate {
+  animation-delay: 1.3s;
 }
 
 .contact__company-info.animate-on-scroll {

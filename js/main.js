@@ -10,21 +10,29 @@ function initLanguageSwitcher() {
   // Mobile language switcher
   const toggleButton = document.getElementById('language-toggle');
   const dropdown = document.getElementById('language-dropdown');
-  
+
   // Desktop language switcher
   const toggleButtonDesktop = document.getElementById('language-toggle-desktop');
   const dropdownDesktop = document.getElementById('language-dropdown-desktop');
-  
+
   const currentLanguageSpans = document.querySelectorAll('.current-language');
   const languageOptions = document.querySelectorAll('.language-switcher__option');
 
   // Helper function to toggle dropdown
   function toggleDropdown(button, dropdown, e) {
     e.stopPropagation();
-    dropdown.classList.toggle('show');
-    // Close other dropdown if open
-    const otherDropdown = dropdown === dropdownDesktop ? dropdown : dropdownDesktop;
-    if (otherDropdown) otherDropdown.classList.remove('show');
+
+    // Check if the clicked dropdown is currently open
+    const isCurrentlyOpen = dropdown.classList.contains('show');
+
+    // Close all dropdowns first
+    if (dropdown) dropdown.classList.remove('show');
+    if (dropdownDesktop) dropdownDesktop.classList.remove('show');
+
+    // If it wasn't open, open the clicked one
+    if (!isCurrentlyOpen) {
+      dropdown.classList.add('show');
+    }
   }
 
   // Toggle mobile dropdown
@@ -45,17 +53,17 @@ function initLanguageSwitcher() {
   document.addEventListener('click', function (e) {
     const allToggleButtons = [toggleButton, toggleButtonDesktop].filter(Boolean);
     const allDropdowns = [dropdown, dropdownDesktop].filter(Boolean);
-    
+
     let clickedInside = false;
-    allToggleButtons.forEach(btn => {
+    allToggleButtons.forEach((btn) => {
       if (btn && btn.contains(e.target)) clickedInside = true;
     });
-    allDropdowns.forEach(dd => {
+    allDropdowns.forEach((dd) => {
       if (dd && dd.contains(e.target)) clickedInside = true;
     });
 
     if (!clickedInside) {
-      allDropdowns.forEach(dd => dd.classList.remove('show'));
+      allDropdowns.forEach((dd) => dd.classList.remove('show'));
     }
   });
 
@@ -63,34 +71,42 @@ function initLanguageSwitcher() {
   languageOptions.forEach((option) => {
     option.addEventListener('click', function () {
       const selectedLang = this.getAttribute('data-lang');
-      const selectedText = this.textContent;
-
-      // Update all current language displays
-      currentLanguageSpans.forEach(span => {
-        span.textContent = selectedText;
-      });
 
       // Close all dropdowns
-      [dropdown, dropdownDesktop].forEach(dd => {
+      [dropdown, dropdownDesktop].forEach((dd) => {
         if (dd) dd.classList.remove('show');
       });
 
       // Switch language using i18n
       if (window.i18n) {
         window.i18n.setLanguage(selectedLang);
+        updateLanguageOptions();
       }
     });
   });
 
-  // Set initial language display
-  if (window.i18n) {
-    const currentLang = window.i18n.getCurrentLanguage();
-    const langMap = { zh: '中文', ja: '日本語' };
-    const langText = langMap[currentLang] || 'Language';
-    currentLanguageSpans.forEach(span => {
-      span.textContent = langText;
+  // Function to update language options visibility
+  function updateLanguageOptions() {
+    const currentLang = window.i18n ? window.i18n.getCurrentLanguage() : 'zh';
+
+    // Keep button text as "Language"
+    currentLanguageSpans.forEach((span) => {
+      span.textContent = 'Language';
+    });
+
+    // Show only the opposite language option
+    languageOptions.forEach((option) => {
+      const optionLang = option.getAttribute('data-lang');
+      if (optionLang === currentLang) {
+        option.style.display = 'none';
+      } else {
+        option.style.display = 'block';
+      }
     });
   }
+
+  // Set initial language display
+  updateLanguageOptions();
 }
 
 function initSmoothScrolling() {
@@ -229,7 +245,7 @@ function initCarousel() {
   const nextBtn = document.querySelector('.carousel__nav--next');
   const designerCards = document.querySelectorAll('.designer__card');
   const galleryContainer = document.querySelector('.designer__gallery');
-  
+
   if (!carouselTrack || !prevBtn || !nextBtn || designerCards.length === 0) {
     return;
   }
@@ -242,57 +258,70 @@ function initCarousel() {
   const designers = [
     {
       name: 'fujimori',
-      portfolioCount: 4
+      portfolioCount: 4,
     },
     {
-      name: 'flora', 
-      portfolioCount: 4
+      name: 'flora',
+      portfolioCount: 4,
     },
     {
       name: 'haler',
-      portfolioCount: 4  
+      portfolioCount: 4,
     },
     {
       name: 'nana',
-      portfolioCount: 4
+      portfolioCount: 4,
     },
     {
       name: 'caleb',
-      portfolioCount: 4
-    }
+      portfolioCount: 4,
+    },
   ];
 
   // Show specific designer card using track transform
   function showCard(index) {
     // Calculate the transform value to show the desired card
     const transformValue = -(index * cardWidth);
-    
+
     // Apply transform to the track
     carouselTrack.style.transform = `translateX(${transformValue}%)`;
-    
+
     // Update gallery with current designer's portfolio
     updateGallery(index);
-    
+
     currentIndex = index;
   }
 
   // Update gallery with designer's portfolio images
   function updateGallery(designerIndex) {
     if (!galleryContainer) return;
-    
+
     const designer = designers[designerIndex];
-    
-    // Clear existing images
-    galleryContainer.innerHTML = '';
-    
-    // Generate new portfolio images
-    for (let i = 1; i <= designer.portfolioCount; i++) {
-      const img = document.createElement('img');
-      img.src = `./assets/images/designers/${designer.name}/${designer.name}-portfolio-${i}.jpg`;
-      img.alt = `${designer.name}作品集${i}`;
-      img.className = 'designer__image';
-      galleryContainer.appendChild(img);
-    }
+
+    // Add fade out animation
+    galleryContainer.style.opacity = '0';
+    galleryContainer.style.transform = 'translateY(20px)';
+
+    // Wait for fade out transition
+    setTimeout(() => {
+      // Clear existing images
+      galleryContainer.innerHTML = '';
+
+      // Generate new portfolio images
+      for (let i = 1; i <= designer.portfolioCount; i++) {
+        const img = document.createElement('img');
+        img.src = `./assets/images/designers/${designer.name}/${designer.name}-portfolio-${i}.jpg`;
+        img.alt = `${designer.name}作品集${i}`;
+        img.className = 'designer__image';
+        galleryContainer.appendChild(img);
+      }
+
+      // Add fade in animation
+      setTimeout(() => {
+        galleryContainer.style.opacity = '1';
+        galleryContainer.style.transform = 'translateY(0)';
+      }, 50);
+    }, 300); // Wait for fade out
   }
 
   // Navigate to previous card (left arrow)
@@ -310,14 +339,14 @@ function initCarousel() {
   }
 
   // Event listeners
-  prevBtn.addEventListener('click', function(e) {
+  prevBtn.addEventListener('click', function (e) {
     e.preventDefault();
     e.stopPropagation();
     console.log('Prev button clicked');
     prevCard();
   });
-  
-  nextBtn.addEventListener('click', function(e) {
+
+  nextBtn.addEventListener('click', function (e) {
     e.preventDefault();
     e.stopPropagation();
     console.log('Next button clicked');
@@ -325,7 +354,7 @@ function initCarousel() {
   });
 
   // Keyboard navigation
-  document.addEventListener('keydown', function(e) {
+  document.addEventListener('keydown', function (e) {
     if (e.key === 'ArrowLeft') {
       prevCard();
     } else if (e.key === 'ArrowRight') {
@@ -337,11 +366,11 @@ function initCarousel() {
   let startX = 0;
   let endX = 0;
 
-  carouselContent.addEventListener('touchstart', function(e) {
+  carouselContent.addEventListener('touchstart', function (e) {
     startX = e.touches[0].clientX;
   });
 
-  carouselContent.addEventListener('touchend', function(e) {
+  carouselContent.addEventListener('touchend', function (e) {
     endX = e.changedTouches[0].clientX;
     handleSwipe();
   });

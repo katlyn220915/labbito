@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="RABBITO - 優質咖啡廳與生活空間" />
-    <meta name="keywords" content="咖啡, 咖啡廳, RABBITO, 生活空間, 下午茶" />
-    <meta property="og:title" content="RABBITO - 優質咖啡廳" />
-    <meta property="og:description" content="享受優質咖啡與舒適生活空間的完美體驗" />
+    <meta name="description" content=" LAbbito - 髮廊" />
+    <meta name="keywords" content="髮廊, LAbbito" />
+    <meta property="og:title" content="LAbbito - 髮廊" />
+    <meta property="og:description" content="LAbbito - 從指尖，到髮間，更好的自己，在此遇見" />
     <meta property="og:type" content="website" />
-    <title>RABBITO - 優質咖啡廳</title>
+    <title>LAbbito</title>
 
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -30,8 +30,12 @@
           <span class="current-language">Language</span><span>▼</span>
         </button>
         <div class="language-switcher__dropdown" id="language-dropdown">
-          <button class="language-switcher__option" data-lang="zh">中文</button>
-          <button class="language-switcher__option" data-lang="ja">日本語</button>
+          <button class="language-switcher__option" data-lang="zh" style="display: none">
+            中文
+          </button>
+          <button class="language-switcher__option" data-lang="ja" style="display: none">
+            日本語
+          </button>
         </div>
       </div>
       <div class="mobile-menu-btn" id="mobile-menu-btn">
@@ -56,7 +60,7 @@
             <li class="header__nav-item">
               <a href="#service" class="header__nav-link">
                 <span class="text-light-brown">Service</span>
-                <span data-i18n="header.navigation.services" class="text-cjk">服務項目</span>
+                <span data-i18n="header.navigation.service" class="text-cjk">服務項目</span>
               </a>
             </li>
             <li class="header__nav-item">
@@ -85,8 +89,12 @@
             <span class="current-language">Language</span><span>▼</span>
           </button>
           <div class="language-switcher__dropdown" id="language-dropdown-desktop">
-            <button class="language-switcher__option" data-lang="zh">中文</button>
-            <button class="language-switcher__option" data-lang="ja">日本語</button>
+            <button class="language-switcher__option" data-lang="zh" style="display: none">
+              中文
+            </button>
+            <button class="language-switcher__option" data-lang="ja" style="display: none">
+              日本語
+            </button>
           </div>
         </div>
       </div>
@@ -97,18 +105,22 @@
       <section class="hero hero__image">
         <div class="hero__content">
           <h1 class="hero__title sr-only">LAbbito</h1>
-          <img src="./assets/images/LAbbito.svg" alt="LAbbito" class="hero__logo-image" />
+          <img
+            src="./assets/images/LAbbito.svg"
+            alt="LAbbito"
+            class="hero__logo-image hero-animate"
+          />
           <img
             src="./assets/images/hair-salon-handwrite.svg"
             alt="Hair Salon"
-            class="hero__subtitle-image"
+            class="hero__subtitle-image hero-animate"
           />
-          <p class="hero__slogan text-cjk">
+          <p class="hero__slogan text-cjk hero-animate">
             <span data-i18n="hero.slogan.1">從指尖，到髮間</span>
             <img
               src="./assets/images/icons/scissors-light-brown.png"
               alt="icon-scissors"
-              class="icon"
+              class="icon slogan-icon"
             />
             <span data-i18n="hero.slogan.2">更好的自己，在此遇見</span>
           </p>
@@ -160,7 +172,7 @@
                         </td>
                         <td class="service__table-price"></td>
                         <td class="service__table-price"></td>
-                        <td class="service__table-price">800 起</td>
+                        <td class="service__table-price">800 <span data-i18n="service.unit">起</span></td>
                       </tr>
                       <tr>
                         <td
@@ -171,7 +183,7 @@
                         </td>
                         <td class="service__table-price"></td>
                         <td class="service__table-price"></td>
-                        <td class="service__table-price">1600 起</td>
+                        <td class="service__table-price">1600 <span data-i18n="service.unit"></span>起</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -245,7 +257,7 @@
                         </td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">-</td>
-                        <td class="service__table-price">1500 起</td>
+                        <td class="service__table-price">1500 <span data-i18n="service.unit">起</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -360,7 +372,7 @@
                         </td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">-</td>
-                        <td class="service__table-price">2500 起</td>
+                        <td class="service__table-price">2500 <span data-i18n="service.unit">起</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -482,7 +494,7 @@
                         </td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">-</td>
-                        <td class="service__table-price">800 起</td>
+                        <td class="service__table-price">800<span data-i18n="service.unit">起</span></td>
                       </tr>
                       <tr>
                         <td
@@ -493,7 +505,7 @@
                         </td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">-</td>
-                        <td class="service__table-price">1000 起</td>
+                        <td class="service__table-price">1000 <span data-i18n="service.unit">起</span></td>
                       </tr>
                       <tr>
                         <td
@@ -504,7 +516,7 @@
                         </td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">-</td>
-                        <td class="service__table-price">300 起</td>
+                        <td class="service__table-price">300 <span data-i18n="service.unit">起</span></td>
                       </tr>
                       <tr>
                         <td
@@ -515,7 +527,7 @@
                         </td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">-</td>
-                        <td class="service__table-price">700 起</td>
+                        <td class="service__table-price">700 <span data-i18n="service.unit">起</span></td>
                       </tr>
                     </tbody>
                   </table>
@@ -550,17 +562,20 @@
                 <div class="designer__card">
                   <div class="designer__info">
                     <h3 class="text-cjk">
-                      <span class="designer__title">設計總監</span>
+                      <span class="designer__title" data-i18n="designers.fugimori.title">設計總監</span>
                       <span class="designer__name text-cjk">藤森篤</span>
                     </h3>
-                    <p class="designer__handle text-serif">
+                    <a
+                      href="https://www.instagram.com/labbitosalon/"
+                      class="designer__handle text-serif"
+                    >
                       作品集 @labbitosalon
                       <img
                         src="./assets/images/icons/instagram.png"
                         alt="Instagram"
                         class="social-icon"
                       />
-                    </p>
+                    </a>
                   </div>
                   <div class="designer__photo">
                     <img
@@ -574,17 +589,20 @@
                 <div class="designer__card">
                   <div class="designer__info">
                     <h3 class="text-cjk">
-                      <span class="designer__title">資深設計師</span>
+                      <span class="designer__title" data-i18n="designers.flora.title">資深設計師</span>
                       <span class="designer__name text-cjk">Flora</span>
                     </h3>
-                    <p class="designer__handle text-serif">
+                    <a
+                      href="https://www.insta gram.com/flora_labbito?igsh=aXZvMG9jcTdoOHA="
+                      class="designer__handle text-serif"
+                    >
                       作品集 @labbitosalon
                       <img
                         src="./assets/images/icons/instagram.png"
                         alt="Instagram"
                         class="social-icon"
                       />
-                    </p>
+                    </a>
                   </div>
                   <div class="designer__photo">
                     <img
@@ -598,17 +616,20 @@
                 <div class="designer__card">
                   <div class="designer__info">
                     <h3 class="text-cjk">
-                      <span class="designer__title">資深設計師</span>
+                      <span class="designer__title" data-i18n="designers.haler.title">資深設計師</span>
                       <span class="designer__name text-cjk">Haler</span>
                     </h3>
-                    <p class="designer__handle text-serif">
+                    <a
+                      href="https://www.instagram.com/haler_labbitohairsalon?igsh=Nm5scjN6eG9yOHdk"
+                      class="designer__handle text-serif"
+                    >
                       作品集 @labbitosalon
                       <img
                         src="./assets/images/icons/instagram.png"
                         alt="Instagram"
                         class="social-icon"
                       />
-                    </p>
+                    </a>
                   </div>
                   <div class="designer__photo">
                     <img
@@ -622,17 +643,20 @@
                 <div class="designer__card">
                   <div class="designer__info">
                     <h3 class="text-cjk">
-                      <span class="designer__title">設計師</span>
+                      <span class="designer__title" data-i18n="designers.nana.title">設計師</span>
                       <span class="designer__name text-cjk">Nana</span>
                     </h3>
-                    <p class="designer__handle text-serif">
+                    <a
+                      href="https://www.instagram.com/labbitosalon/"
+                      class="designer__handle text-serif"
+                    >
                       作品集 @labbitosalon
                       <img
                         src="./assets/images/icons/instagram.png"
                         alt="Instagram"
                         class="social-icon"
                       />
-                    </p>
+                    </a>
                   </div>
                   <div class="designer__photo">
                     <img
@@ -646,17 +670,20 @@
                 <div class="designer__card">
                   <div class="designer__info">
                     <h3 class="text-cjk">
-                      <span class="designer__title">設計師</span>
+                      <span class="designer__title" data-i18n="designers.caleb.title">設計師</span>
                       <span class="designer__name text-cjk">Caleb</span>
                     </h3>
-                    <p class="designer__handle text-serif">
+                    <a
+                      href="https://www.instagram.com/caleb_color"
+                      class="designer__handle text-serif"
+                    >
                       作品集 @labbitosalon
                       <img
                         src="./assets/images/icons/instagram.png"
                         alt="Instagram"
                         class="social-icon"
                       />
-                    </p>
+                    </a>
                   </div>
                   <div class="designer__photo">
                     <img
@@ -685,26 +712,26 @@
               <div class="designer__card_background"></div>
             </div>
 
-            <div class="designer__gallery">
+            <div class="designer__gallery animate-section">
               <img
                 src="./assets/images/designers/fujimori/fujimori-portfolio-1.jpg"
                 alt="藤森篤作品集1"
-                class="designer__image"
+                class="designer__image animate-on-scroll"
               />
               <img
                 src="./assets/images/designers/fujimori/fujimori-portfolio-2.jpg"
                 alt="藤森篤作品集2"
-                class="designer__image"
+                class="designer__image animate-on-scroll"
               />
               <img
                 src="./assets/images/designers/fujimori/fujimori-portfolio-3.jpg"
                 alt="藤森篤作品集3"
-                class="designer__image"
+                class="designer__image animate-on-scroll"
               />
               <img
                 src="./assets/images/designers/fujimori/fujimori-portfolio-4.jpg"
                 alt="藤森篤作品集4"
-                class="designer__image"
+                class="designer__image animate-on-scroll"
               />
             </div>
           </div>
@@ -714,16 +741,23 @@
           <div class="mascot__decoration mascot__decoration--top"></div>
           <div class="mascot__container">
             <div class="mascot__photo">
-              <img src="./assets/images/lulu.png" alt="店貓嚕嚕" class="mascot__image-photo" />
+              <img
+                src="./assets/images/lulu.png"
+                alt="店貓嚕嚕"
+                class="mascot__image-photo animate-on-scroll"
+              />
+              <img src="./assets/images/text-lulu.svg" alt="lulu" class="mascot__eng_name" />
             </div>
             <div class="mascot__intro">
               <div class="mascot__logo-container">
                 <img src="./assets/images/LAbbito-brown.svg" alt="logo" class="mascot__logo" />
-                <h4 class="mascot__title" data-i18n="mascot.title">店貓</h4>
+                <h4 class="mascot__title" data-i18n="designers.mascot.title"></h4>
               </div>
               <p>
-                <span class="mascot__name-prefix" data-i18n="mascot.name-prefix">理事長</span>
-                <span class="mascot__name" data-i18n="mascot.name">嚕嚕</span>
+                <span class="mascot__name-prefix" data-i18n="designers.mascot.name-prefix"
+                  >理事長</span
+                >
+                <span class="mascot__name" data-i18n="designers.mascot.name">嚕嚕</span>
               </p>
             </div>
           </div>
@@ -805,7 +839,7 @@
                 </div>
 
                 <div class="location__booking">
-                  <button class="booking__btn">
+                  <a href="tel:0423020522" class="booking__btn" id="booking-btn">
                     <img
                       src="./assets/images/icons/phone-green.png"
                       alt="phone"
@@ -814,25 +848,23 @@
                     <span class="text-cjk" data-i18n="location.booking">立即預約</span>
                     <img
                       src="./assets/images/icons/pointer-green.png"
-                      alt="Line"
+                      alt="pointer"
                       class="booking__icon"
                     />
-                  </button>
+                  </a>
                 </div>
               </div>
 
               <div class="location__map">
-                <div>
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14562.687258567195!2d120.6453809786193!3d24.148160970982975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d9fb29d007f%3A0x53713b44f9c6485c!2sLAbbito%20HAIR%20SALON!5e0!3m2!1szh-TW!2stw!4v1757320586219!5m2!1szh-TW!2stw"
-                    width="500"
-                    height="400"
-                    style="border: 0"
-                    allowfullscreen=""
-                    loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
-                  ></iframe>
-                </div>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14562.687258567195!2d120.6453809786193!3d24.148160970982975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d9fb29d007f%3A0x53713b44f9c6485c!2sLAbbito%20HAIR%20SALON!5e0!3m2!1szh-TW!2stw!4v1757320586219!5m2!1szh-TW!2stw"
+                  width="100%"
+                  height="400"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
           </div>
@@ -906,14 +938,14 @@
                 </div>
 
                 <div class="contact__social-media">
-                  <a href="#" class="contact__social-link">
+                  <a href="https://www.facebook.com/LAbbitoHAIRSALON " class="contact__social-link">
                     <img
                       src="./assets/images/icons/facebook.png"
                       alt="Facebook"
                       class="contact__social-icon"
                     />
                   </a>
-                  <a href="#" class="contact__social-link">
+                  <a href="https://www.instagram.com/labbitosalon/" class="contact__social-link">
                     <img
                       src="./assets/images/icons/instagram.png"
                       alt="Instagram"
@@ -940,17 +972,24 @@
                 alt="contact"
                 class="section-header__title-image"
               />
-              <h2 class="section-header__title text-cjk" data-i18n="career.title">品牌旗下事業</h2>
+              <h2 class="section-header__title" data-i18n="career.title">品牌旗下事業</h2>
             </div>
             <img src="./assets/images/logo-brown.svg" alt="logo" class="section-header__logo" />
           </header>
           <div class="career__content">
             <div class="brand__card">
-              <img src="./assets/images/career/logo-black.png" alt="LAbbito" class="brand__logo" />
+              <a
+                href="https://www.instagram.com/pastalabbito?igsh=MWZ3Y28wZTk4bXJzcA%3D%3D"
+                class="brand__link"
+              >
+                <img
+                  src="./assets/images/career/logo-black.png"
+                  alt="LAbbito"
+                  class="brand__logo"
+                />
+              </a>
               <div class="brand__info">
-                <h3 class="brand__title text-cjk" data-i18n="career.pasta_restaurant">
-                  義大利麵餐廳
-                </h3>
+                <h3 class="brand__title" data-i18n="career.pasta_restaurant">義大利麵餐廳</h3>
                 <p class="brand__subtitle text-serif" data-i18n="career.pasta_restaurant.subtitle">
                   Pasta LAbbito
                 </p>
@@ -958,11 +997,16 @@
             </div>
 
             <div class="brand__card">
-              <img
-                src="./assets/images/career/logo-green.png"
-                alt="LAbbito Old&Green"
-                class="brand__logo"
-              />
+              <a
+                href="https://www.instagram.com/labbi to_old_green?igsh=Z21tOWZtOW12cXR6"
+                class="brand__link"
+              >
+                <img
+                  src="./assets/images/career/logo-green.png"
+                  alt="LAbbito Old&Green"
+                  class="brand__logo"
+                />
+              </a>
               <div class="brand__info">
                 <h3 class="brand__title text-cjk" data-i18n="career.plant_display">空間規劃</h3>
                 <p class="brand__subtitle text-serif" data-i18n="career.plant_display.subtitle">

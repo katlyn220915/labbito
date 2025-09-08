@@ -1,5 +1,19 @@
 /* Fonts */
 @font-face {
+  font-family: 'GenSekiGothic TW regular';
+  src: url('../assets/fonts/GenSekiGothic2TW-R.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GenSekiGothic JP Regular';
+  src: url('../assets/fonts/GenSekiGothic2JP-R.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'STIXTwoText';
   src: url('../assets/fonts/STIXTwoText.ttf') format('truetype');
   font-weight: normal;
@@ -39,7 +53,8 @@
 
   --font-serif: 'STIXTwoText', 'Times New Roman', serif;
   --font-script: 'Hunter River Regular', cursive;
-  --font-cjk: '源石黑體', 'GenSekiMincho', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho Pro', serif;
+  --font-cjk: 'GenSekiGothic TW regular', 'GenSekiGothic JP Regular', 'GenSekiMincho', 'Yu Mincho',
+    'YuMincho', 'Hiragino Mincho Pro', serif;
   --font-handwriting: 'Tekitou Poem SemiBold', cursive;
   --font-handwriting-thin: 'ChenYuluoyan Thin', cursive;
 
@@ -308,16 +323,14 @@ ul {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--color-white);
-  border: 1px solid var(--color-light-brown);
-  border-radius: var(--border-radius);
+  width: 100%;
+  margin-top: var(--spacing-xs);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
   transition: all 0.3s ease;
   z-index: 1000;
-  min-width: 100px;
 }
 
 .language-switcher__dropdown.show {
@@ -328,26 +341,25 @@ ul {
 
 .language-switcher__option {
   width: 100%;
-  padding: var(--spacing-sm);
-  border: none;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 1px solid var(--color-light-brown);
+  border-radius: var(--border-radius);
   background-color: transparent;
-  color: var(--color-text-primary);
+  color: var(--color-light-brown);
+  letter-spacing: var(--letter-spacing-base);
   font-size: 14px;
   cursor: pointer;
-  text-align: left;
-  transition: background-color 0.3s ease;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
 }
 
 .language-switcher__option:hover {
-  background-color: var(--color-cream);
-}
-
-.language-switcher__option:first-child {
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
-}
-
-.language-switcher__option:last-child {
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  background-color: var(--color-light-brown);
+  color: var(--color-white);
 }
 
 /* Main Container */
@@ -375,7 +387,7 @@ ul {
 }
 
 .hero__logo-image {
-  width: 400px;
+  width: 80%;
 }
 
 .hero__content {
@@ -539,7 +551,6 @@ ul {
   margin-top: var(--spacing-sm);
   font-size: 0.9rem;
   color: var(--color-brown);
-  font-style: italic;
 }
 
 .service__decoration {
@@ -744,7 +755,6 @@ ul {
 
   display: flex;
   align-items: center;
-  position: relative;
 }
 
 .mascot__decoration {
@@ -790,6 +800,15 @@ ul {
   align-items: center;
   justify-content: center;
   gap: 5rem;
+}
+
+.mascot__eng_name {
+  position: absolute;
+  right: -25px;
+  bottom: 50px;
+  z-index: 2;
+
+  width: 150px;
 }
 
 .mascot__logo {
@@ -972,8 +991,14 @@ ul {
 }
 
 .booking__btn:hover {
+  background-color: var(--color-primary-green);
+  color: var(--color-white);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.booking__btn:hover .booking__icon {
+  filter: brightness(0) invert(1);
 }
 
 .booking__icon {
@@ -983,7 +1008,7 @@ ul {
 
 .location__map {
   flex: 1;
-  max-width: 500px;
+  width: 100%;
 }
 
 .map__image {

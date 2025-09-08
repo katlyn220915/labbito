@@ -76,7 +76,15 @@ body.menu-open {
 
   /* Hide decorator aside on mobile */
   .decorator__aside {
-    display: none !important;
+    background-color: transparent;
+  }
+
+  .scroll-icon {
+    width: 16px;
+  }
+
+  .slogan-icon {
+    width: 16px;
   }
 
   /* Header */
@@ -127,10 +135,6 @@ body.menu-open {
   }
 
   /* Hero */
-  .hero {
-    height: 60vh;
-    min-height: 400px;
-  }
 
   .hero__title {
     font-size: 2.5rem;
@@ -234,6 +238,10 @@ body.menu-open {
 }
 
 @media (max-width: 768px) {
+  .main {
+    margin-top: 0;
+  }
+
   .mobile-menu-container {
     display: flex;
   }
@@ -386,7 +394,7 @@ body.menu-open {
 
   /* Hero Section*/
   .hero__slogan {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .mascot__decoration--top {
@@ -425,25 +433,8 @@ body.menu-open {
 
 /* Extra Small Mobile Styles */
 @media (max-width: 320px) {
-  .hero__title {
-    font-size: 1.8rem;
-  }
-
-  .hero__subtitle {
-    font-size: 0.8rem;
-  }
-
-  .menu__title,
-  .about__title,
-  .story__title,
-  .location__title,
-  .gallery__title,
-  .contact__title {
-    font-size: 1.6rem;
-  }
-
   .menu__category-title {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .cat-section__title {

@@ -16,6 +16,7 @@
     },
     "service": {
       "title": "服務項目",
+      "unit": "起",
       "cut": {
         "title": "剪髮",
         "stylist_haircut": "設計師剪髮 (含洗)",
@@ -56,7 +57,19 @@
       }
     },
     "designers": {
-      "title": "設計團隊"
+      "title": "設計團隊",
+      "mascot": {
+        "title": "店貓",
+        "name-prefix": "理事長",
+        "name": "嚕嚕"
+      },
+      "designers": {
+        "fugimori.title": "設計總監",
+        "flora.title": "專職設計師",
+        "haler.title": "資深設計師",
+        "nana.title": "彩妝",
+        "caleb.title": "合作設計師"
+      }
     },
     "about": {
       "title": "髮廊資訊",
@@ -75,9 +88,10 @@
     "location": {
       "title": "店舖位置",
       "address": "地址：",
-      "address.text": "東京都渋谷区代々木1-1-1<br>JR代々木駅 徒歩3分",
+      "address.text": "台中市西區中興街122巷12號1樓",
       "hours": "營業時間：",
-      "hours.text": "平日：8:00 - 20:00<br>假日：9:00 - 21:00"
+      "hours.text": "平日：8:00 - 20:00<br>假日：9:00 - 21:00",
+      "booking": "立即預約"
     },
     "gallery": {
       "title": "咖啡廳相簿"
@@ -110,6 +124,7 @@
     },
     "service": {
       "title": "メニュー",
+      "unit": "up",
       "cut": {
         "title": "カット",
         "stylist_haircut": "Stylist haircut",
@@ -150,7 +165,19 @@
       }
     },
     "designers": {
-      "title": "スタッフ"
+      "title": "スタッフ",
+      "mascot": {
+        "title": "",
+        "name-prefix": "看板ネコ",
+        "name": "ルル"
+      },
+      "designers": {
+        "fugimori.title": "クリエイティブディレクター",
+        "flora.title": "ヘアスタイリスト",
+        "haler.title": "ヘアスタイリスト",
+        "nana.title": "メイクスタイリスト",
+        "caleb.title": "契約スタイリスト"
+      }
     },
     "about": {
       "title": "店舗情報",
@@ -168,9 +195,9 @@
     },
     "location": {
       "title": "店舗所在地",
-      "address": "住所",
+      "address": "サロン住所：",
       "address.text": "東京都渋谷区代々木1-1-1<br>JR代々木駅 徒歩3分",
-      "hours": "営業時間",
+      "hours": "営業時間：",
       "hours.text": "11:00-19:00(定休日月曜日)",
       "salon_address": "サロン住所",
       "salon_address.text": "台中市西區中興街122巷12號1樓",
