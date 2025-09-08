@@ -411,6 +411,10 @@ body.menu-open {
     font-size: 0.9rem;
   }
 
+  .designer__card::after {
+    bottom: 0;
+  }
+
   .mascot__decoration--top {
     width: 200px;
     height: 170px;
