@@ -207,3 +207,39 @@
     transform: translateY(0);
   }
 }
+
+/* Carousel container */
+.carousel__track {
+  display: flex;
+  width: 500%; /* 5 cards × 100% */
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  align-items: center;
+}
+
+/* Each card takes full width of visible area */
+.designer__card {
+  flex: 0 0 20%; /* 100% / 5 cards = 20% each */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius);
+  width: 20%;
+  max-width: none;
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+/* Button hover effects */
+.carousel__nav {
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: flex !important;
+}
+
+.carousel__nav:hover .carousel__arrow {
+  transform: scale(1.1);
+}

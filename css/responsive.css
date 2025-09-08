@@ -347,7 +347,7 @@ body.menu-open {
     /* z-index: 0; */
   }
 
-  .designers__carousel::after {
+  /* .designers__carousel::after {
     content: '';
     position: absolute;
     background-color: var(--color-white);
@@ -355,6 +355,15 @@ body.menu-open {
     height: 150px;
     top: 60%;
     z-index: -1;
+  } */
+
+  /* Fix carousel buttons on mobile */
+  .carousel__nav--prev {
+    left: 10px;
+  }
+
+  .carousel__nav--next {
+    right: 10px;
   }
 }
 

@@ -81,10 +81,10 @@
         </nav>
 
         <div class="language-switcher">
-          <button class="language-switcher__btn text-serif" id="language-toggle">
+          <button class="language-switcher__btn text-serif" id="language-toggle-desktop">
             <span class="current-language">Language</span><span>▼</span>
           </button>
-          <div class="language-switcher__dropdown" id="language-dropdown">
+          <div class="language-switcher__dropdown" id="language-dropdown-desktop">
             <button class="language-switcher__option" data-lang="zh">中文</button>
             <button class="language-switcher__option" data-lang="ja">日本語</button>
           </div>
@@ -545,67 +545,168 @@
           </header>
 
           <div class="designers__carousel">
-            <button class="carousel__nav carousel__nav--prev" aria-label="Previous designer">
-              <img
-                src="./assets/images/icons/arrow-left.svg"
-                alt="Previous"
-                class="carousel__arrow"
-              />
-            </button>
-
             <div class="carousel__content">
-              <div class="designer__card">
-                <div class="designer__info">
-                  <h3 class="text-cjk">
-                    <span class="designer__title">設計總監</span>
-                    <span class="designer__name text-cjk">藤森篤</span>
-                  </h3>
-                  <p class="designer__handle text-serif">
-                    作品集 @labbitosalon
+              <div class="carousel__track">
+                <div class="designer__card">
+                  <div class="designer__info">
+                    <h3 class="text-cjk">
+                      <span class="designer__title">設計總監</span>
+                      <span class="designer__name text-cjk">藤森篤</span>
+                    </h3>
+                    <p class="designer__handle text-serif">
+                      作品集 @labbitosalon
+                      <img
+                        src="./assets/images/icons/instagram.png"
+                        alt="Instagram"
+                        class="social-icon"
+                      />
+                    </p>
+                  </div>
+                  <div class="designer__photo">
                     <img
-                      src="./assets/images/icons/instagram.png"
-                      alt="Instagram"
-                      class="social-icon"
+                      src="./assets/images/designers/fujimori/fujimori.jpg"
+                      alt="藤森篤"
+                      class="designer__image-photo"
                     />
-                  </p>
+                  </div>
                 </div>
-                <div class="designer__photo">
-                  <img
-                    src="./assets/images/designers/fujimori/fujimori.jpg"
-                    alt="藤森篤"
-                    class="designer__image-photo"
-                  />
+
+                <div class="designer__card">
+                  <div class="designer__info">
+                    <h3 class="text-cjk">
+                      <span class="designer__title">資深設計師</span>
+                      <span class="designer__name text-cjk">Flora</span>
+                    </h3>
+                    <p class="designer__handle text-serif">
+                      作品集 @labbitosalon
+                      <img
+                        src="./assets/images/icons/instagram.png"
+                        alt="Instagram"
+                        class="social-icon"
+                      />
+                    </p>
+                  </div>
+                  <div class="designer__photo">
+                    <img
+                      src="./assets/images/designers/flora/flora.jpg"
+                      alt="Flora"
+                      class="designer__image-photo"
+                    />
+                  </div>
+                </div>
+
+                <div class="designer__card">
+                  <div class="designer__info">
+                    <h3 class="text-cjk">
+                      <span class="designer__title">資深設計師</span>
+                      <span class="designer__name text-cjk">Haler</span>
+                    </h3>
+                    <p class="designer__handle text-serif">
+                      作品集 @labbitosalon
+                      <img
+                        src="./assets/images/icons/instagram.png"
+                        alt="Instagram"
+                        class="social-icon"
+                      />
+                    </p>
+                  </div>
+                  <div class="designer__photo">
+                    <img
+                      src="./assets/images/designers/haler/haler.jpg"
+                      alt="Haler"
+                      class="designer__image-photo"
+                    />
+                  </div>
+                </div>
+
+                <div class="designer__card">
+                  <div class="designer__info">
+                    <h3 class="text-cjk">
+                      <span class="designer__title">設計師</span>
+                      <span class="designer__name text-cjk">Nana</span>
+                    </h3>
+                    <p class="designer__handle text-serif">
+                      作品集 @labbitosalon
+                      <img
+                        src="./assets/images/icons/instagram.png"
+                        alt="Instagram"
+                        class="social-icon"
+                      />
+                    </p>
+                  </div>
+                  <div class="designer__photo">
+                    <img
+                      src="./assets/images/designers/nana/nana.jpg"
+                      alt="Nana"
+                      class="designer__image-photo"
+                    />
+                  </div>
+                </div>
+
+                <div class="designer__card">
+                  <div class="designer__info">
+                    <h3 class="text-cjk">
+                      <span class="designer__title">設計師</span>
+                      <span class="designer__name text-cjk">Caleb</span>
+                    </h3>
+                    <p class="designer__handle text-serif">
+                      作品集 @labbitosalon
+                      <img
+                        src="./assets/images/icons/instagram.png"
+                        alt="Instagram"
+                        class="social-icon"
+                      />
+                    </p>
+                  </div>
+                  <div class="designer__photo">
+                    <img
+                      src="./assets/images/designers/caleb/caleb.jpg"
+                      alt="Caleb"
+                      class="designer__image-photo"
+                    />
+                  </div>
                 </div>
               </div>
+              <button class="carousel__nav carousel__nav--prev" aria-label="Previous designer">
+                <img
+                  src="./assets/images/icons/arrow-left.svg"
+                  alt="Previous"
+                  class="carousel__arrow"
+                />
+              </button>
+
+              <button class="carousel__nav carousel__nav--next" aria-label="Next designer">
+                <img
+                  src="./assets/images/icons/arrow-right.svg"
+                  alt="Next"
+                  class="carousel__arrow"
+                />
+              </button>
               <div class="designer__card_background"></div>
             </div>
 
-            <button class="carousel__nav carousel__nav--next" aria-label="Next designer">
-              <img src="./assets/images/icons/arrow-right.svg" alt="Next" class="carousel__arrow" />
-            </button>
-          </div>
-
-          <div class="designer__gallery">
-            <img
-              src="./assets/images/designers/fujimori/portfolio-1.jpg"
-              alt="藤森篤作品集1"
-              class="designer__image"
-            />
-            <img
-              src="./assets/images/designers/fujimori/portfolio-2.jpg"
-              alt="藤森篤作品集2"
-              class="designer__image"
-            />
-            <img
-              src="./assets/images/designers/fujimori/portfolio-3.jpg"
-              alt="藤森篤作品集3"
-              class="designer__image"
-            />
-            <img
-              src="./assets/images/designers/fujimori/portfolio-4.jpg"
-              alt="藤森篤作品集4"
-              class="designer__image"
-            />
+            <div class="designer__gallery">
+              <img
+                src="./assets/images/designers/fujimori/fujimori-portfolio-1.jpg"
+                alt="藤森篤作品集1"
+                class="designer__image"
+              />
+              <img
+                src="./assets/images/designers/fujimori/fujimori-portfolio-2.jpg"
+                alt="藤森篤作品集2"
+                class="designer__image"
+              />
+              <img
+                src="./assets/images/designers/fujimori/fujimori-portfolio-3.jpg"
+                alt="藤森篤作品集3"
+                class="designer__image"
+              />
+              <img
+                src="./assets/images/designers/fujimori/fujimori-portfolio-4.jpg"
+                alt="藤森篤作品集4"
+                class="designer__image"
+              />
+            </div>
           </div>
         </div>
 
@@ -721,11 +822,17 @@
               </div>
 
               <div class="location__map">
-                <img
-                  src="./assets/images/map.jpg"
-                  alt="LAbbito Hair Salon 地圖"
-                  class="map__image"
-                />
+                <div>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14562.687258567195!2d120.6453809786193!3d24.148160970982975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d9fb29d007f%3A0x53713b44f9c6485c!2sLAbbito%20HAIR%20SALON!5e0!3m2!1szh-TW!2stw!4v1757320586219!5m2!1szh-TW!2stw"
+                    width="500"
+                    height="400"
+                    style="border: 0"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>

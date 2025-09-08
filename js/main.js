@@ -3,24 +3,59 @@ document.addEventListener('DOMContentLoaded', function () {
   initSmoothScrolling();
   initMobileMenu();
   initScrollAnimations();
+  initCarousel();
 });
 
 function initLanguageSwitcher() {
+  // Mobile language switcher
   const toggleButton = document.getElementById('language-toggle');
   const dropdown = document.getElementById('language-dropdown');
-  const currentLanguageSpan = document.querySelector('.current-language');
+  
+  // Desktop language switcher
+  const toggleButtonDesktop = document.getElementById('language-toggle-desktop');
+  const dropdownDesktop = document.getElementById('language-dropdown-desktop');
+  
+  const currentLanguageSpans = document.querySelectorAll('.current-language');
   const languageOptions = document.querySelectorAll('.language-switcher__option');
 
-  // Toggle dropdown
-  toggleButton.addEventListener('click', function (e) {
+  // Helper function to toggle dropdown
+  function toggleDropdown(button, dropdown, e) {
     e.stopPropagation();
     dropdown.classList.toggle('show');
-  });
+    // Close other dropdown if open
+    const otherDropdown = dropdown === dropdownDesktop ? dropdown : dropdownDesktop;
+    if (otherDropdown) otherDropdown.classList.remove('show');
+  }
+
+  // Toggle mobile dropdown
+  if (toggleButton && dropdown) {
+    toggleButton.addEventListener('click', function (e) {
+      toggleDropdown(toggleButton, dropdown, e);
+    });
+  }
+
+  // Toggle desktop dropdown
+  if (toggleButtonDesktop && dropdownDesktop) {
+    toggleButtonDesktop.addEventListener('click', function (e) {
+      toggleDropdown(toggleButtonDesktop, dropdownDesktop, e);
+    });
+  }
 
   // Close dropdown when clicking outside
   document.addEventListener('click', function (e) {
-    if (!toggleButton.contains(e.target) && !dropdown.contains(e.target)) {
-      dropdown.classList.remove('show');
+    const allToggleButtons = [toggleButton, toggleButtonDesktop].filter(Boolean);
+    const allDropdowns = [dropdown, dropdownDesktop].filter(Boolean);
+    
+    let clickedInside = false;
+    allToggleButtons.forEach(btn => {
+      if (btn && btn.contains(e.target)) clickedInside = true;
+    });
+    allDropdowns.forEach(dd => {
+      if (dd && dd.contains(e.target)) clickedInside = true;
+    });
+
+    if (!clickedInside) {
+      allDropdowns.forEach(dd => dd.classList.remove('show'));
     }
   });
 
@@ -30,11 +65,15 @@ function initLanguageSwitcher() {
       const selectedLang = this.getAttribute('data-lang');
       const selectedText = this.textContent;
 
-      // Update the current language display
-      currentLanguageSpan.textContent = selectedText;
+      // Update all current language displays
+      currentLanguageSpans.forEach(span => {
+        span.textContent = selectedText;
+      });
 
-      // Close dropdown
-      dropdown.classList.remove('show');
+      // Close all dropdowns
+      [dropdown, dropdownDesktop].forEach(dd => {
+        if (dd) dd.classList.remove('show');
+      });
 
       // Switch language using i18n
       if (window.i18n) {
@@ -47,7 +86,10 @@ function initLanguageSwitcher() {
   if (window.i18n) {
     const currentLang = window.i18n.getCurrentLanguage();
     const langMap = { zh: '中文', ja: '日本語' };
-    currentLanguageSpan.textContent = langMap[currentLang] || 'Language';
+    const langText = langMap[currentLang] || 'Language';
+    currentLanguageSpans.forEach(span => {
+      span.textContent = langText;
+    });
   }
 }
 
@@ -179,4 +221,144 @@ function initMobileMenu() {
       }
     });
   }
+}
+
+function initCarousel() {
+  const carouselTrack = document.querySelector('.carousel__track');
+  const prevBtn = document.querySelector('.carousel__nav--prev');
+  const nextBtn = document.querySelector('.carousel__nav--next');
+  const designerCards = document.querySelectorAll('.designer__card');
+  const galleryContainer = document.querySelector('.designer__gallery');
+  
+  if (!carouselTrack || !prevBtn || !nextBtn || designerCards.length === 0) {
+    return;
+  }
+
+  let currentIndex = 0;
+  const totalCards = designerCards.length;
+  const cardWidth = 100 / totalCards; // Each card is 20% (100% / 5)
+
+  // Designer data with portfolio images
+  const designers = [
+    {
+      name: 'fujimori',
+      portfolioCount: 4
+    },
+    {
+      name: 'flora', 
+      portfolioCount: 4
+    },
+    {
+      name: 'haler',
+      portfolioCount: 4  
+    },
+    {
+      name: 'nana',
+      portfolioCount: 4
+    },
+    {
+      name: 'caleb',
+      portfolioCount: 4
+    }
+  ];
+
+  // Show specific designer card using track transform
+  function showCard(index) {
+    // Calculate the transform value to show the desired card
+    const transformValue = -(index * cardWidth);
+    
+    // Apply transform to the track
+    carouselTrack.style.transform = `translateX(${transformValue}%)`;
+    
+    // Update gallery with current designer's portfolio
+    updateGallery(index);
+    
+    currentIndex = index;
+  }
+
+  // Update gallery with designer's portfolio images
+  function updateGallery(designerIndex) {
+    if (!galleryContainer) return;
+    
+    const designer = designers[designerIndex];
+    
+    // Clear existing images
+    galleryContainer.innerHTML = '';
+    
+    // Generate new portfolio images
+    for (let i = 1; i <= designer.portfolioCount; i++) {
+      const img = document.createElement('img');
+      img.src = `./assets/images/designers/${designer.name}/${designer.name}-portfolio-${i}.jpg`;
+      img.alt = `${designer.name}作品集${i}`;
+      img.className = 'designer__image';
+      galleryContainer.appendChild(img);
+    }
+  }
+
+  // Navigate to previous card (left arrow)
+  function prevCard() {
+    const newIndex = currentIndex === 0 ? totalCards - 1 : currentIndex - 1;
+    console.log('Prev card: going from', currentIndex, 'to', newIndex);
+    showCard(newIndex);
+  }
+
+  // Navigate to next card (right arrow)
+  function nextCard() {
+    const newIndex = currentIndex === totalCards - 1 ? 0 : currentIndex + 1;
+    console.log('Next card: going from', currentIndex, 'to', newIndex);
+    showCard(newIndex);
+  }
+
+  // Event listeners
+  prevBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('Prev button clicked');
+    prevCard();
+  });
+  
+  nextBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log('Next button clicked');
+    nextCard();
+  });
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowLeft') {
+      prevCard();
+    } else if (e.key === 'ArrowRight') {
+      nextCard();
+    }
+  });
+
+  // Touch/swipe support
+  let startX = 0;
+  let endX = 0;
+
+  carouselContent.addEventListener('touchstart', function(e) {
+    startX = e.touches[0].clientX;
+  });
+
+  carouselContent.addEventListener('touchend', function(e) {
+    endX = e.changedTouches[0].clientX;
+    handleSwipe();
+  });
+
+  function handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = startX - endX;
+
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) {
+        nextCard(); // Swipe left - next card
+      } else {
+        prevCard(); // Swipe right - previous card
+      }
+    }
+  }
+
+  // Initialize carousel
+  showCard(0);
 }
