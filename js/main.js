@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
   initLanguageSwitcher();
   initSmoothScrolling();
-  initImagePlaceholders();
-  initMenuItemHovers();
-  initGalleryHovers();
+  initMobileMenu();
+  initScrollAnimations();
 });
 
 function initLanguageSwitcher() {
@@ -30,13 +29,13 @@ function initLanguageSwitcher() {
     option.addEventListener('click', function () {
       const selectedLang = this.getAttribute('data-lang');
       const selectedText = this.textContent;
-      
+
       // Update the current language display
       currentLanguageSpan.textContent = selectedText;
-      
+
       // Close dropdown
       dropdown.classList.remove('show');
-      
+
       // Switch language using i18n
       if (window.i18n) {
         window.i18n.setLanguage(selectedLang);
@@ -47,7 +46,7 @@ function initLanguageSwitcher() {
   // Set initial language display
   if (window.i18n) {
     const currentLang = window.i18n.getCurrentLanguage();
-    const langMap = { 'zh': '中文', 'ja': '日本語' };
+    const langMap = { zh: '中文', ja: '日本語' };
     currentLanguageSpan.textContent = langMap[currentLang] || 'Language';
   }
 }
@@ -86,13 +85,38 @@ function initSmoothScrolling() {
 //     }
 // });
 
-function observeElementsInView() {
-  const observer = new IntersectionObserver(
+function initScrollAnimations() {
+  // Create intersection observer for section animations with fade in/out
+  const sectionObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
+          entry.target.classList.add('fade-in');
+        } else {
+          entry.target.classList.remove('fade-in');
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+      rootMargin: '0px 0px -100px 0px',
+    }
+  );
+
+  // Observe all animate-section elements
+  const animatedSections = document.querySelectorAll('.animate-section');
+  animatedSections.forEach((section) => {
+    sectionObserver.observe(section);
+  });
+
+  // Create intersection observer for individual elements with fade in/out
+  const elementObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        } else {
+          entry.target.classList.remove('fade-in');
         }
       });
     },
@@ -102,15 +126,57 @@ function observeElementsInView() {
     }
   );
 
-  const animatedElements = document.querySelectorAll(
-    '.menu__category, .about__content, .story__content, .location__info'
-  );
-  animatedElements.forEach((el) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
+  // Observe individual elements within sections
+  const animatedElements = document.querySelectorAll('.animate-on-scroll');
+  animatedElements.forEach((element) => {
+    elementObserver.observe(element);
   });
 }
 
-setTimeout(observeElementsInView, 1000);
+function initMobileMenu() {
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const header = document.getElementById('header');
+  const mobileNavClose = document.getElementById('mobile-nav-close');
+  const navLinks = document.querySelectorAll('.header__nav-link');
+
+  function closeMenu() {
+    mobileMenuBtn.classList.remove('active');
+    header.classList.remove('active');
+    document.body.classList.remove('menu-open');
+  }
+
+  function openMenu() {
+    mobileMenuBtn.classList.add('active');
+    header.classList.add('active');
+    document.body.classList.add('menu-open');
+  }
+
+  if (mobileMenuBtn && header) {
+    // Toggle mobile menu
+    mobileMenuBtn.addEventListener('click', function () {
+      if (header.classList.contains('active')) {
+        closeMenu();
+      } else {
+        console.log('openMenu');
+        openMenu();
+      }
+    });
+
+    // Close menu with close button
+    if (mobileNavClose) {
+      mobileNavClose.addEventListener('click', closeMenu);
+    }
+
+    // Close menu when clicking on nav links
+    navLinks.forEach((link) => {
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Close menu when clicking outside (but not on menu button)
+    document.addEventListener('click', function (e) {
+      if (!mobileMenuBtn.contains(e.target) && !headerNav.contains(e.target)) {
+        closeMenu();
+      }
+    });
+  }
+}

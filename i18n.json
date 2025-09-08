@@ -74,9 +74,9 @@
     },
     "location": {
       "title": "店舖位置",
-      "address": "地址",
+      "address": "地址：",
       "address.text": "東京都渋谷区代々木1-1-1<br>JR代々木駅 徒歩3分",
-      "hours": "營業時間",
+      "hours": "營業時間：",
       "hours.text": "平日：8:00 - 20:00<br>假日：9:00 - 21:00"
     },
     "gallery": {

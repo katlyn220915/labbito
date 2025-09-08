@@ -13,53 +13,88 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/animations.css" />
   </head>
   <body>
+    <div class="decorator__aside">
+      <div class="scroll-indicator">
+        <img src="./assets/images/icons/scissors.svg" alt="scroll" class="scroll-icon" />
+        <div class="scroll-line"></div>
+        <span class="scroll-text">SCROLL</span>
+      </div>
+    </div>
+
+    <div class="mobile-menu-container">
+      <div class="language-switcher language-switcher-mobile">
+        <button class="language-switcher__btn text-serif" id="language-toggle">
+          <span class="current-language">Language</span><span>▼</span>
+        </button>
+        <div class="language-switcher__dropdown" id="language-dropdown">
+          <button class="language-switcher__option" data-lang="zh">中文</button>
+          <button class="language-switcher__option" data-lang="ja">日本語</button>
+        </div>
+      </div>
+      <div class="mobile-menu-btn" id="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <header class="header animate-header" id="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <img src="./assets/images/LAbbito.svg" alt="LAbbito" class="header__logo-image" />
+          <img
+            src="./assets/images/hair-salon-handwrite.svg"
+            alt="hair salon"
+            class="header__salon-handwrite"
+          />
+        </div>
+        <nav class="header__nav" id="header-nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="#service" class="header__nav-link">
+                <span class="text-light-brown">Service</span>
+                <span data-i18n="header.navigation.services" class="text-cjk">服務項目</span>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#designers" class="header__nav-link">
+                <span class="text-light-brown">Designers</span>
+                <span data-i18n="header.navigation.designers" class="text-serif">設計團隊</span>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#about" class="header__nav-link">
+                <span class="text-light-brown">About</span>
+                <span data-i18n="header.navigation.about" class="text-cjk">髮廊資訊</span>
+              </a>
+            </li>
+            <li class="header__nav-item">
+              <a href="#contact" class="header__nav-link">
+                <span class="text-light-brown">Contact</span>
+                <span data-i18n="header.navigation.contact" class="text-cjk">聯絡我們</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="language-switcher">
+          <button class="language-switcher__btn text-serif" id="language-toggle">
+            <span class="current-language">Language</span><span>▼</span>
+          </button>
+          <div class="language-switcher__dropdown" id="language-dropdown">
+            <button class="language-switcher__option" data-lang="zh">中文</button>
+            <button class="language-switcher__option" data-lang="ja">日本語</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
     <main class="main">
       <!-- Hero Section -->
       <section class="hero hero__image">
-        <header class="header">
-          <div class="header__container">
-            <nav class="header__nav">
-              <ul class="header__nav-list">
-                <li class="header__nav-item">
-                  <a href="#service" class="header__nav-link">
-                    <span class="text-light-brown">Service</span>
-                    <span data-i18n="header.navigation.services" class="text-cjk">服務項目</span>
-                  </a>
-                </li>
-                <li class="header__nav-item">
-                  <a href="#designers" class="header__nav-link">
-                    <span class="text-light-brown">Designers</span>
-                    <span data-i18n="header.navigation.designers" class="text-serif">設計團隊</span>
-                  </a>
-                </li>
-                <li class="header__nav-item">
-                  <a href="#about" class="header__nav-link">
-                    <span class="text-light-brown">About</span>
-                    <span data-i18n="header.navigation.about" class="text-cjk">髮廊資訊</span>
-                  </a>
-                </li>
-                <li class="header__nav-item">
-                  <a href="#contact" class="header__nav-link">
-                    <span class="text-light-brown">Contact</span>
-                    <span data-i18n="header.navigation.contact" class="text-cjk">聯絡我們</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-
-            <div class="language-switcher">
-              <button class="language-switcher__btn text-serif" id="language-toggle">
-                <span class="current-language">Language</span><span>▼</span>
-              </button>
-              <div class="language-switcher__dropdown" id="language-dropdown">
-                <button class="language-switcher__option" data-lang="zh">中文</button>
-                <button class="language-switcher__option" data-lang="ja">日本語</button>
-              </div>
-            </div>
-          </div>
-        </header>
         <div class="hero__content">
           <h1 class="hero__title sr-only">LAbbito</h1>
           <img src="./assets/images/LAbbito.svg" alt="LAbbito" class="hero__logo-image" />
@@ -81,7 +116,7 @@
       </section>
 
       <!-- Service Section -->
-      <section class="service" id="service">
+      <section class="service animate-section" id="service">
         <div class="service__container">
           <div class="service__header">
             <header class="section-header">
@@ -117,13 +152,23 @@
                   <table class="service__pricing-table">
                     <tbody>
                       <tr>
-                        <td class="service__table-service text-cjk" data-i18n="service.cut.stylist_haircut">設計師剪髮 (含洗)</td>
+                        <td
+                          class="service__table-service text-cjk"
+                          data-i18n="service.cut.stylist_haircut"
+                        >
+                          設計師剪髮 (含洗)
+                        </td>
                         <td class="service__table-price"></td>
                         <td class="service__table-price"></td>
                         <td class="service__table-price">800 起</td>
                       </tr>
                       <tr>
-                        <td class="service__table-service text-cjk" data-i18n="service.cut.japanese_stylist_haircut">日籍設計師剪髮 (含洗)</td>
+                        <td
+                          class="service__table-service text-cjk"
+                          data-i18n="service.cut.japanese_stylist_haircut"
+                        >
+                          日籍設計師剪髮 (含洗)
+                        </td>
                         <td class="service__table-price"></td>
                         <td class="service__table-price"></td>
                         <td class="service__table-price">1600 起</td>
@@ -159,25 +204,45 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="service__table-service text-cjk" data-i18n="service.color.full_color">單色染頭</td>
+                        <td
+                          class="service__table-service text-cjk"
+                          data-i18n="service.color.full_color"
+                        >
+                          單色染頭
+                        </td>
                         <td class="service__table-price">2200</td>
                         <td class="service__table-price">2400</td>
                         <td class="service__table-price">2600</td>
                       </tr>
                       <tr>
-                        <td class="service__table-service text-cjk" data-i18n="service.color.full_highlights">全頭挑染</td>
+                        <td
+                          class="service__table-service text-cjk"
+                          data-i18n="service.color.full_highlights"
+                        >
+                          全頭挑染
+                        </td>
                         <td class="service__table-price">2200</td>
                         <td class="service__table-price">2400</td>
                         <td class="service__table-price">2600</td>
                       </tr>
                       <tr>
-                        <td class="service__table-service text-cjk" data-i18n="service.color.design_highlights">設計挑染</td>
+                        <td
+                          class="service__table-service text-cjk"
+                          data-i18n="service.color.design_highlights"
+                        >
+                          設計挑染
+                        </td>
                         <td class="service__table-price">900</td>
                         <td class="service__table-price">1000</td>
                         <td class="service__table-price">1100</td>
                       </tr>
                       <tr>
-                        <td class="service__table-service text-cjk" data-i18n="service.color.retouch_color">髮根補色</td>
+                        <td
+                          class="service__table-service text-cjk"
+                          data-i18n="service.color.retouch_color"
+                        >
+                          髮根補色
+                        </td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">1500 起</td>
@@ -213,19 +278,34 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="service__table-service text-cjk" data-i18n="service.perm.cold_perm">冷燙燙捲</td>
+                        <td
+                          class="service__table-service text-cjk"
+                          data-i18n="service.perm.cold_perm"
+                        >
+                          冷燙燙捲
+                        </td>
                         <td class="service__table-price">2200</td>
                         <td class="service__table-price">2400</td>
                         <td class="service__table-price">2600</td>
                       </tr>
                       <tr>
-                        <td class="service__table-service text-cjk" data-i18n="service.perm.warm_perm">溫塑燙捲</td>
+                        <td
+                          class="service__table-service text-cjk"
+                          data-i18n="service.perm.warm_perm"
+                        >
+                          溫塑燙捲
+                        </td>
                         <td class="service__table-price">3000</td>
                         <td class="service__table-price">3200</td>
                         <td class="service__table-price">3400</td>
                       </tr>
                       <tr>
-                        <td class="service__table-service text-cjk" data-i18n="service.perm.digital_perm">熱塑燙捲</td>
+                        <td
+                          class="service__table-service text-cjk"
+                          data-i18n="service.perm.digital_perm"
+                        >
+                          熱塑燙捲
+                        </td>
                         <td class="service__table-price">3300</td>
                         <td class="service__table-price">3500</td>
                         <td class="service__table-price">3700</td>
@@ -261,13 +341,23 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="service__table-service text-cjk" data-i18n="service.straight.straight_perm">燙直 (縮毛矯正)</td>
+                        <td
+                          class="service__table-service text-cjk"
+                          data-i18n="service.straight.straight_perm"
+                        >
+                          燙直 (縮毛矯正)
+                        </td>
                         <td class="service__table-price">2800</td>
                         <td class="service__table-price">3100</td>
                         <td class="service__table-price">3400</td>
                       </tr>
                       <tr>
-                        <td class="service__table-service text-cjk" data-i18n="service.straight.root_straight">髮根燙直</td>
+                        <td
+                          class="service__table-service text-cjk"
+                          data-i18n="service.straight.root_straight"
+                        >
+                          髮根燙直
+                        </td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">2500 起</td>
@@ -307,20 +397,32 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="service__table-service text-cjk" data-i18n="service.treatment.deep_conditioning">深層護髮</td>
+                        <td
+                          class="service__table-service text-cjk"
+                          data-i18n="service.treatment.deep_conditioning"
+                        >
+                          深層護髮
+                        </td>
                         <td class="service__table-price">1000</td>
                         <td class="service__table-price">1200</td>
                         <td class="service__table-price">1400</td>
                       </tr>
                       <tr>
-                        <td class="service__table-service text-cjk" data-i18n="service.treatment.repair_restorative">髮質修護</td>
+                        <td
+                          class="service__table-service text-cjk"
+                          data-i18n="service.treatment.repair_restorative"
+                        >
+                          髮質修護
+                        </td>
                         <td class="service__table-price">1200</td>
                         <td class="service__table-price">1500</td>
                         <td class="service__table-price">1800</td>
                       </tr>
                     </tbody>
                   </table>
-                  <div class="service__note text-cjk" data-i18n="service.treatment.discount_note">※染/燙搭配護髮可折抵200元</div>
+                  <div class="service__note text-cjk" data-i18n="service.treatment.discount_note">
+                    ※染/燙搭配護髮可折抵200元
+                  </div>
                 </div>
               </li>
 
@@ -350,37 +452,67 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <td class="service__table-service text-cjk" data-i18n="service.other.head_spa">頭皮護理</td>
+                        <td
+                          class="service__table-service text-cjk"
+                          data-i18n="service.other.head_spa"
+                        >
+                          頭皮護理
+                        </td>
                         <td class="service__table-price">800</td>
                         <td class="service__table-price">800</td>
                         <td class="service__table-price">1000</td>
                       </tr>
                       <tr>
-                        <td class="service__table-service text-cjk" data-i18n="service.other.shampoo_blowdry">洗髮</td>
+                        <td
+                          class="service__table-service text-cjk"
+                          data-i18n="service.other.shampoo_blowdry"
+                        >
+                          洗髮
+                        </td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">400</td>
                       </tr>
                       <tr>
-                        <td class="service__table-service text-cjk" data-i18n="service.other.half_hair_setup">半頭造型</td>
+                        <td
+                          class="service__table-service text-cjk"
+                          data-i18n="service.other.half_hair_setup"
+                        >
+                          半頭造型
+                        </td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">800 起</td>
                       </tr>
                       <tr>
-                        <td class="service__table-service text-cjk" data-i18n="service.other.full_hair_setup">整頭造型</td>
+                        <td
+                          class="service__table-service text-cjk"
+                          data-i18n="service.other.full_hair_setup"
+                        >
+                          整頭造型
+                        </td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">1000 起</td>
                       </tr>
                       <tr>
-                        <td class="service__table-service text-cjk" data-i18n="service.other.point_makeup">重點妝</td>
+                        <td
+                          class="service__table-service text-cjk"
+                          data-i18n="service.other.point_makeup"
+                        >
+                          重點妝
+                        </td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">300 起</td>
                       </tr>
                       <tr>
-                        <td class="service__table-service text-cjk" data-i18n="service.other.full_makeup">全妝</td>
+                        <td
+                          class="service__table-service text-cjk"
+                          data-i18n="service.other.full_makeup"
+                        >
+                          全妝
+                        </td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">-</td>
                         <td class="service__table-price">700 起</td>
@@ -397,7 +529,7 @@
       </section>
 
       <!-- Designers Section -->
-      <section class="designers" id="designers">
+      <section class="designers animate-section" id="designers">
         <div class="designers__bg"></div>
         <div class="designers__container">
           <header class="section-header">
@@ -499,7 +631,7 @@
       </section>
 
       <!-- About Section -->
-      <section class="about" id="about">
+      <section class="about animate-section" id="about">
         <div class="about__bg"></div>
         <div class="about__container">
           <div class="about__content">
@@ -528,10 +660,13 @@
                 <p class="about__info-text" data-i18n="about.text3">
                   從髮質出發，重視每一縷髮絲的質感與健康，為每位客人量身打造最適合的風格。
                 </p>
-                <p class="about__info-text about__info-text-slogan" data-i18n="about.text4">
-                  我們相信髮型不只是外表的呈現，
+                <p
+                  class="about__info-text about__info-text-slogan text-handwriting-thin"
+                  data-i18n="about.text4"
+                >
+                  <span class="slogan-text">我們相信髮型不只是外表的呈現，</span>
                   <br />
-                  而是能展現個人自然魅力的美重元素。
+                  <span class="slogan-text">而是能展現個人自然魅力的美重元素。</span>
                 </p>
               </div>
             </div>
@@ -554,19 +689,15 @@
 
                 <div class="location__details">
                   <div class="location__hours">
-                    <span class="location__label" data-i18n="location.hours"
-                      >營業時間：</span
-                    >
+                    <span class="location__label" data-i18n="location.hours">營業時間：</span>
                     <span class="location__value" data-i18n="location.hours.text"
                       >11:00-19:00(週一公休)</span
                     >
                   </div>
 
                   <div class="location__address">
-                    <span class="location__label" data-i18n="location.salon_address"
-                      >沙龍地址：</span
-                    >
-                    <span class="location__value" data-i18n="location.salon_address.text"
+                    <span class="location__label" data-i18n="location.address">沙龍地址：</span>
+                    <span class="location__value" data-i18n="location.address.text"
                       >台中市西區中興街122巷12號1樓</span
                     >
                   </div>
@@ -602,7 +733,7 @@
       </section>
 
       <!-- Contact Section -->
-      <section class="contact" id="contact" id="contact">
+      <section class="contact animate-section" id="contact">
         <div class="contact__container">
           <header class="section-header">
             <div class="section-header__content">
@@ -629,23 +760,41 @@
 
                 <div class="contact__business-details">
                   <div class="contact__detail-item">
-                    <span class="contact__detail-label text-cjk" data-i18n="contact.company_name">公司名稱：</span>
-                    <span class="contact__detail-value text-cjk" data-i18n="contact.company_name.text">圓可有限公司</span>
+                    <span class="contact__detail-label text-cjk" data-i18n="contact.company_name"
+                      >公司名稱：</span
+                    >
+                    <span
+                      class="contact__detail-value text-cjk"
+                      data-i18n="contact.company_name.text"
+                      >圓可有限公司</span
+                    >
                   </div>
 
                   <div class="contact__detail-item">
-                    <span class="contact__detail-label text-cjk" data-i18n="contact.tax_id">統一編號：</span>
-                    <span class="contact__detail-value" data-i18n="contact.tax_id.text">24268837</span>
+                    <span class="contact__detail-label text-cjk" data-i18n="contact.tax_id"
+                      >統一編號：</span
+                    >
+                    <span class="contact__detail-value" data-i18n="contact.tax_id.text"
+                      >24268837</span
+                    >
                   </div>
 
                   <div class="contact__detail-item">
-                    <span class="contact__detail-label text-cjk" data-i18n="contact.email_address">E-mail：</span>
-                    <span class="contact__detail-value" data-i18n="contact.email_address.text">labbitosalon@yahoo.com.tw</span>
+                    <span class="contact__detail-label text-cjk" data-i18n="contact.email_address"
+                      >E-mail：</span
+                    >
+                    <span class="contact__detail-value" data-i18n="contact.email_address.text"
+                      >labbitosalon@yahoo.com.tw</span
+                    >
                   </div>
 
                   <div class="contact__detail-item">
-                    <span class="contact__detail-label text-cjk" data-i18n="contact.phone_number">聯絡電話：</span>
-                    <span class="contact__detail-value" data-i18n="contact.phone_number.text">04-2302-0522</span>
+                    <span class="contact__detail-label text-cjk" data-i18n="contact.phone_number"
+                      >聯絡電話：</span
+                    >
+                    <span class="contact__detail-value" data-i18n="contact.phone_number.text"
+                      >04-2302-0522</span
+                    >
                   </div>
                 </div>
 
@@ -674,7 +823,7 @@
       </section>
 
       <!-- Career Section -->
-      <section class="career">
+      <section class="career animate-section">
         <div class="career__bg"></div>
         <div class="career__container">
           <header class="section-header">
@@ -692,8 +841,12 @@
             <div class="brand__card">
               <img src="./assets/images/career/logo-black.png" alt="LAbbito" class="brand__logo" />
               <div class="brand__info">
-                <h3 class="brand__title text-cjk" data-i18n="career.pasta_restaurant">義大利麵餐廳</h3>
-                <p class="brand__subtitle text-serif" data-i18n="career.pasta_restaurant.subtitle">Pasta LAbbito</p>
+                <h3 class="brand__title text-cjk" data-i18n="career.pasta_restaurant">
+                  義大利麵餐廳
+                </h3>
+                <p class="brand__subtitle text-serif" data-i18n="career.pasta_restaurant.subtitle">
+                  Pasta LAbbito
+                </p>
               </div>
             </div>
 
@@ -705,7 +858,9 @@
               />
               <div class="brand__info">
                 <h3 class="brand__title text-cjk" data-i18n="career.plant_display">空間規劃</h3>
-                <p class="brand__subtitle text-serif" data-i18n="career.plant_display.subtitle">LAbbito Old&Green</p>
+                <p class="brand__subtitle text-serif" data-i18n="career.plant_display.subtitle">
+                  LAbbito Old&Green
+                </p>
               </div>
             </div>
           </div>

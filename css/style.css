@@ -13,6 +13,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Tekitou Poem SemiBold';
+  src: url('../assets/fonts/TekitouPoemSemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ChenYuluoyan Thin';
+  src: url('../assets/fonts/ChenYuluoyanThin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* CSS Variables */
 :root {
   --color-primary-green: #677b46;
@@ -26,6 +40,8 @@
   --font-serif: 'STIXTwoText', 'Times New Roman', serif;
   --font-script: 'Hunter River Regular', cursive;
   --font-cjk: '源石黑體', 'GenSekiMincho', 'Yu Mincho', 'YuMincho', 'Hiragino Mincho Pro', serif;
+  --font-handwriting: 'Tekitou Poem SemiBold', cursive;
+  --font-handwriting-thin: 'ChenYuluoyan Thin', cursive;
 
   --spacing-xxs: 4px;
   --spacing-xs: 8px;
@@ -49,12 +65,21 @@
   padding: 0;
 }
 
+html {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
   font-family: var(--font-cjk);
   color: var(--color-text-primary);
   line-height: 1.4;
   letter-spacing: var(--letter-spacing-base);
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  margin: 0;
 }
 
 img {
@@ -96,6 +121,14 @@ ul {
 
 .text-script {
   font-family: var(--font-script);
+}
+
+.text-handwriting {
+  font-family: var(--font-handwriting);
+}
+
+.text-handwriting-thin {
+  font-family: var(--font-handwriting-thin);
 }
 
 .color-white {
@@ -143,23 +176,48 @@ ul {
   width: 56px;
 }
 
-/* Image Placeholder */
-.image-placeholder {
-  background-color: var(--color-light-brown);
-  border: 2px dashed var(--color-brown);
+.decorator__aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 35px;
+  height: 100vh;
+  background-color: var(--color-primary-green);
+  z-index: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
+  padding-bottom: var(--spacing-lg);
 }
 
-.image-placeholder__text {
-  font-size: 14px;
-  color: var(--color-brown);
-  text-align: center;
-  padding: var(--spacing-sm);
-  opacity: 0.7;
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.scroll-icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.scroll-line {
+  width: 1px;
+  height: 60px;
+  background-color: var(--color-white);
+  opacity: 0.8;
+}
+
+.scroll-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: var(--color-white);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  opacity: 0.9;
 }
 
 /* Header */
@@ -172,9 +230,8 @@ ul {
 }
 
 .header__container {
-  max-width: var(--container-max-width);
   margin: 0 auto;
-  padding: 0 var(--spacing-sm);
+  padding: 0 var(--spacing-xl);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -295,7 +352,9 @@ ul {
 
 /* Main Container */
 .main {
+  margin-top: -77.8px;
   width: 100%;
+  overflow-x: hidden;
 }
 
 /* Hero Section */
@@ -371,7 +430,7 @@ ul {
 
 .service__header {
   padding: var(--spacing-lg) var(--spacing-sm);
-  width: 30%;
+  width: 40%;
   min-height: 100vh;
 }
 
@@ -490,7 +549,6 @@ ul {
   width: 100%;
   height: 200px;
   background-color: rgba(139, 111, 71, 0.5);
-  z-index: 1;
 }
 
 /* Designers Section */
@@ -650,12 +708,16 @@ ul {
 
 .designer__gallery {
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  place-items: center;
   justify-content: center;
   gap: var(--spacing-md);
+  flex-wrap: wrap;
 }
 
 .designer__image {
+  width: 200px;
   height: 200px;
   border-radius: var(--border-radius);
 }
@@ -701,8 +763,7 @@ ul {
   height: 300px;
   position: absolute;
   bottom: 0;
-  right: -170px;
-  z-index: 1;
+  right: -100px;
 }
 
 .mascot__container {
@@ -783,11 +844,11 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--spacing-xl);
+  gap: var(--spacing-sm);
 }
 
 .salon__image {
-  width: 600px;
+  width: 50%;
 }
 
 .about__info {
@@ -808,11 +869,13 @@ ul {
 
 .about__info-content {
   max-width: 500px;
+  padding: 0 var(--spacing-md);
 }
 
 .about__info-text-slogan {
   text-align: center;
-  font-size: 1.6rem;
+  color: var(--color-brown);
+  font-size: 2rem;
 }
 
 .about__location {
@@ -964,7 +1027,7 @@ ul {
 }
 
 .contact__image {
-  width: 600px;
+  width: 50%;
 }
 
 .contact__company-info {
