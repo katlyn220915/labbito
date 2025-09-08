@@ -80,7 +80,7 @@ function initLanguageSwitcher() {
       // Switch language using i18n
       if (window.i18n) {
         window.i18n.setLanguage(selectedLang);
-        updateLanguageOptions();
+        // updateLanguageOptions will be called automatically by i18n system
       }
     });
   });
@@ -107,6 +107,9 @@ function initLanguageSwitcher() {
 
   // Set initial language display
   updateLanguageOptions();
+  
+  // Expose updateLanguageOptions globally for i18n system
+  window.updateLanguageOptions = updateLanguageOptions;
 }
 
 function initSmoothScrolling() {
