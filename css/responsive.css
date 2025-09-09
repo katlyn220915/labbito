@@ -388,7 +388,7 @@ body.menu-open {
     position: absolute;
     left: 50%;
     bottom: var(--spacing-lg);
-    width: 90%;
+    width: 85%;
     height: 180px;
     background-color: var(--color-white);
     transform: translateX(-50%);
@@ -447,7 +447,6 @@ body.menu-open {
   }
 
   .carousel__content::before {
-    width: 95%;
     height: 156px;
     bottom: var(--spacing-lg);
   }
