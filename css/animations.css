@@ -258,16 +258,41 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Mobile section animations */
+  /* Mobile section animations - optimized for performance */
   .animate-section,
   .animate-on-scroll {
-    transform: translateY(20px);
-    transition-duration: 0.6s;
+    transform: translateY(15px);
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out;
+    will-change: transform, opacity;
   }
 
   .animate-section.fade-in,
   .animate-on-scroll.fade-in {
     transform: translateY(0);
+  }
+  
+  /* Disable complex animations on very small devices for better performance */
+  @media (max-width: 480px) and (max-height: 800px) {
+    .animate-section,
+    .animate-on-scroll {
+      transform: none;
+      transition-duration: 0.2s;
+    }
+    
+    .animate-section.fade-in,
+    .animate-on-scroll.fade-in {
+      transform: none;
+    }
+    
+    /* Only animate opacity for better performance */
+    .animate-section {
+      transition-property: opacity;
+    }
+    
+    .animate-on-scroll {
+      transition-property: opacity;
+    }
   }
 }
 

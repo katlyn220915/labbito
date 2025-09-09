@@ -291,6 +291,10 @@ body.menu-open {
     background-color: var(--color-primary-green);
   }
 
+  body.menu-open .language-switcher-mobile {
+    display: none;
+  }
+
   .header__container {
     flex-direction: column;
     align-items: center;
