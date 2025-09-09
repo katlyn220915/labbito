@@ -450,6 +450,11 @@ body.menu-open {
   .hero__slogan {
     font-size: 0.9rem;
   }
+
+  .service__table-header {
+    padding-right: 30px;
+  }
+
   .service__table-service {
     padding: var(--spacing-xxs) var(--spacing-xxs);
   }
