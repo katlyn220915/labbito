@@ -206,6 +206,7 @@ ul {
 
 .section-header__logo {
   width: 56px;
+  align-self: anchor-center;
 }
 
 .decorator__aside {

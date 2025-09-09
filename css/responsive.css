@@ -129,6 +129,7 @@ body.menu-open {
   .service__table-service,
   .service__table-price {
     font-size: var(--font-size-small);
+    padding: 0 var(--spacing-xxs);
   }
 
   /* Hero */
@@ -429,6 +430,18 @@ body.menu-open {
 
   /* common */
 
+  .section-header__title {
+    font-size: 1.5rem;
+  }
+
+  .section-header__title-image {
+    width: 150px;
+  }
+
+  .section-header__logo {
+    width: 40px;
+  }
+
   .header {
     padding: var(--spacing-sm) 0;
   }
@@ -451,6 +464,44 @@ body.menu-open {
 
   .designer__card::after {
     bottom: 0;
+  }
+
+  .mascot {
+    margin-top: var(--spacing-lg);
+  }
+
+  .mascot__logo {
+    width: 180px;
+  }
+
+  .mascot__title {
+    font-size: 1rem;
+  }
+  .mascot__name-prefix {
+    font-size: 1rem;
+  }
+
+  .mascot__name {
+    font-size: 1.4rem;
+  }
+
+  .mascot__image-photo {
+    width: 250px;
+  }
+
+  .mascot__photo::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .mascot__eng_name {
+    width: 180px;
+    bottom: 65px;
+    right: 5px;
+  }
+
+  .slogan-text {
+    font-size: 1.5rem;
   }
 
   /* Contact Section*/
