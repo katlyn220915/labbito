@@ -112,6 +112,7 @@ body.menu-open {
   /* Service Section*/
   .service__content {
     margin-left: var(--spacing-xxl);
+    width: 100%;
   }
 
   .service__category-title {
@@ -124,10 +125,6 @@ body.menu-open {
     padding: var(--spacing-lg) var(--spacing-sm);
   }
 
-  .service__items {
-    max-width: 100%;
-    padding: var(--spacing-lg) 60px var(--spacing-lg) 30px;
-  }
   .service__table-header,
   .service__table-service,
   .service__table-price {
@@ -340,6 +337,10 @@ body.menu-open {
 
   .header__nav-link {
     align-items: flex-start;
+  }
+
+  .service__items {
+    padding: 10% 20% 10% 10%;
   }
 
   /* Designer Section*/

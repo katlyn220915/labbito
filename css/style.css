@@ -947,6 +947,11 @@ ul {
   text-align: left;
 }
 
+/* Japanese language specific styles */
+html[lang='ja'] .slogan-text {
+  font-size: 1.6rem;
+}
+
 .about__location {
   width: 100%;
   margin-top: var(--spacing-lg);
