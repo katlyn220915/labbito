@@ -80,11 +80,11 @@ body.menu-open {
   }
 
   .scroll-icon {
-    width: 16px;
+    width: 24px;
   }
 
   .slogan-icon {
-    width: 16px;
+    width: 24px;
   }
 
   /* Header */
@@ -153,7 +153,8 @@ body.menu-open {
   }
 
   .mascot__container {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    gap: var(--spacing-lg);
   }
 
   .mascot__decoration {
@@ -163,23 +164,30 @@ body.menu-open {
   }
 
   .mascot__decoration--top {
-    width: 200px;
-    height: 170px;
+    width: 280px;
+    height: 200px;
     top: -30px;
     left: -50px;
   }
 
   .mascot__decoration--bottom {
-    width: 150px;
-    height: 120px;
-    right: -50px;
-    bottom: 0;
+    width: 280px;
+    height: 200px;
+    right: -30px;
+    bottom: -100px;
+    z-index: 1;
+    transform: rotateY(180deg);
   }
 
   /* About Section*/
 
+  .about {
+    margin-top: 90px;
+  }
+
   .about__bg {
-    top: 100px;
+    top: 80px;
+    height: 85%;
   }
 
   .about__container {
@@ -188,20 +196,28 @@ body.menu-open {
 
   .about__content {
     flex-direction: column-reverse;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-xxl);
   }
 
   .about__info {
-    padding: 0 var(--spacing-xxl);
+    padding: 0 var(--spacing-lg);
   }
 
   .about__info-text {
     font-size: var(--font-size-small);
   }
 
+  .about__info-text:not(:last-child) {
+    margin-bottom: var(--spacing-md);
+  }
+
   .about__info-text-slogan {
-    font-size: 1.5rem;
-    margin-top: var(--spacing-xxl);
+    font-size: 1.8rem;
+    margin-top: var(--spacing-sm);
+  }
+
+  .about__location {
+    padding: 0 var(--spacing-lg);
   }
 
   .slogan-text {
@@ -214,6 +230,7 @@ body.menu-open {
 
   .contact__content {
     flex-direction: column-reverse;
+    align-items: center;
   }
 
   .contact__image {
@@ -230,11 +247,11 @@ body.menu-open {
 
   .location__wrapper {
     flex-direction: column;
+    padding: var(--spacing-lg) 0;
   }
 
   .booking__btn {
     width: fit-content;
-    align-self: center;
   }
 
   .contact__bg {
@@ -328,7 +345,7 @@ body.menu-open {
   /* Designer Section*/
 
   .designers__bg {
-    height: 50%;
+    height: 55%;
   }
 
   .designers__container {
@@ -384,8 +401,13 @@ body.menu-open {
     right: 10px;
   }
 
-  .location__wrapper {
-    padding: var(--spacing-md);
+  .location__map {
+    width: 100%;
+    padding: 0 var(--spacing-md);
+  }
+
+  .brand__logo {
+    width: 180px;
   }
 }
 
@@ -413,21 +435,6 @@ body.menu-open {
 
   .designer__card::after {
     bottom: 0;
-  }
-
-  .mascot__decoration--top {
-    width: 200px;
-    height: 170px;
-    top: 0px;
-    left: -30px;
-    background-size: contain;
-  }
-
-  .mascot__decoration--bottom {
-    width: 150px;
-    height: 120px;
-    bottom: -100px;
-    background-size: contain;
   }
 
   /* Contact Section*/

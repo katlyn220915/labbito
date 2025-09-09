@@ -804,14 +804,15 @@ ul {
 
 .mascot__decoration--bottom {
   background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
-    url(../assets/images/decoration-bottom.png);
+    url(../assets/images/decoration-top.png);
   background-size: cover;
   background-repeat: no-repeat;
   width: 350px;
   height: 300px;
   position: absolute;
   bottom: 0;
-  right: -130px;
+  right: -100px;
+  z-index: 1;
 }
 
 .mascot__container {
@@ -995,12 +996,14 @@ ul {
 }
 
 .location__label {
+  text-wrap: nowrap;
   color: var(--color-white);
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-normal);
 }
 
 .location__value {
+  text-wrap: nowrap;
   color: var(--color-white);
   font-size: var(--font-size-small);
 }
@@ -1039,7 +1042,7 @@ ul {
 }
 
 .location__map {
-  width: 550px;
+  width: 60%;
   height: 260px;
 }
 

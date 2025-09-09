@@ -111,7 +111,7 @@
       "email": "Email"
     },
     "footer": {
-      "copyright": "© 2024 RABBITO. All rights reserved."
+      "copyright": "Copyright © LAbbito, All Rights Reserved."
     }
   },
   "ja": {
@@ -238,7 +238,7 @@
       "phone_number.text": "04-2302-0522"
     },
     "footer": {
-      "copyright": "© 2024 RABBITO. All rights reserved."
+      "copyright": "Copyright © LAbbito, All Rights Reserved."
     }
   }
 }
