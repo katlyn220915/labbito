@@ -158,6 +158,11 @@ ul {
   font-family: var(--font-handwriting-thin);
 }
 
+/* Japanese language specific fonts */
+html[lang='ja'] .text-handwriting-thin {
+  font-family: var(--font-handwriting);
+}
+
 .color-white {
   color: var(--color-white);
 }
