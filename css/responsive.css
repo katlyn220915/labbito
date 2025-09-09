@@ -131,7 +131,7 @@ body.menu-open {
   .service__table-header,
   .service__table-service,
   .service__table-price {
-    font-size: 1rem;
+    font-size: var(--font-size-small);
   }
 
   /* Hero */
@@ -141,7 +141,7 @@ body.menu-open {
   }
 
   .hero__subtitle {
-    font-size: 1rem;
+    font-size: var(--font-size-small);
   }
 
   .hero__slogan {
@@ -196,7 +196,7 @@ body.menu-open {
   }
 
   .about__info-text {
-    font-size: 1rem;
+    font-size: var(--font-size-small);
   }
 
   .about__info-text-slogan {
@@ -452,7 +452,7 @@ body.menu-open {
 /* Extra Small Mobile Styles */
 @media (max-width: 320px) {
   .menu__category-title {
-    font-size: 1rem;
+    font-size: var(--font-size-small);
   }
 
   .cat-section__title {
