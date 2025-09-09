@@ -158,6 +158,11 @@ ul {
   font-family: var(--font-handwriting-thin);
 }
 
+/* Japanese language specific fonts */
+html[lang='ja'] .text-handwriting-thin {
+  font-family: var(--font-handwriting);
+}
+
 .color-white {
   color: var(--color-white);
 }
@@ -975,6 +980,7 @@ html[lang='ja'] .slogan-text {
 .location__info {
   flex: 1;
   display: flex;
+  max-width: 90%;
   flex-direction: column;
   gap: var(--spacing-sm);
 }
@@ -1013,7 +1019,8 @@ html[lang='ja'] .slogan-text {
 }
 
 .location__value {
-  text-wrap: nowrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
   color: var(--color-white);
   font-size: var(--font-size-small);
 }
