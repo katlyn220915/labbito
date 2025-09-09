@@ -147,9 +147,35 @@ function initSmoothScrolling() {
 // });
 
 function initScrollAnimations() {
+  // Check if device supports animations well (not low-end mobile)
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const isLowEndDevice = window.innerWidth <= 480 && window.innerHeight <= 800;
+  
+  if (prefersReducedMotion || isLowEndDevice) {
+    // Simply show all elements for low-end devices or users who prefer reduced motion
+    document.querySelectorAll('.animate-section, .animate-on-scroll').forEach(el => {
+      el.classList.add('fade-in');
+    });
+    return;
+  }
+
+  // Throttle function to reduce callback frequency
+  let ticking = false;
+  function throttleCallback(callback) {
+    return (entries) => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          callback(entries);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+  }
+
   // Create intersection observer for section animations with fade in/out
   const sectionObserver = new IntersectionObserver(
-    (entries) => {
+    throttleCallback((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('fade-in');
@@ -157,7 +183,7 @@ function initScrollAnimations() {
           entry.target.classList.remove('fade-in');
         }
       });
-    },
+    }),
     {
       threshold: 0.15,
       rootMargin: '0px 0px -100px 0px',
@@ -170,28 +196,35 @@ function initScrollAnimations() {
     sectionObserver.observe(section);
   });
 
-  // Create intersection observer for individual elements with fade in/out
-  const elementObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fade-in');
-        } else {
-          entry.target.classList.remove('fade-in');
-        }
-      });
-    },
-    {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px',
-    }
-  );
+  // Only observe individual elements on larger screens for better performance
+  if (window.innerWidth > 768) {
+    const elementObserver = new IntersectionObserver(
+      throttleCallback((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+          } else {
+            entry.target.classList.remove('fade-in');
+          }
+        });
+      }),
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px',
+      }
+    );
 
-  // Observe individual elements within sections
-  const animatedElements = document.querySelectorAll('.animate-on-scroll');
-  animatedElements.forEach((element) => {
-    elementObserver.observe(element);
-  });
+    // Observe individual elements within sections
+    const animatedElements = document.querySelectorAll('.animate-on-scroll');
+    animatedElements.forEach((element) => {
+      elementObserver.observe(element);
+    });
+  } else {
+    // On mobile, simply show all individual elements to avoid performance issues
+    document.querySelectorAll('.animate-on-scroll').forEach(el => {
+      el.classList.add('fade-in');
+    });
+  }
 }
 
 function initMobileMenu() {

@@ -163,6 +163,10 @@ html[lang='ja'] .text-handwriting-thin {
   font-family: var(--font-handwriting);
 }
 
+html[lang='ja'] .service__table-price-empty {
+  transform: translateX(25%);
+}
+
 .color-white {
   color: var(--color-white);
 }
@@ -714,7 +718,7 @@ html[lang='ja'] .text-handwriting-thin {
   position: absolute;
   left: -1rem;
   top: 55%;
-  height: 80%;
+  height: 50px;
   transform: translateY(-50%);
 }
 
@@ -955,6 +959,7 @@ html[lang='ja'] .text-handwriting-thin {
 .slogan-text {
   display: block;
   text-align: left;
+  text-wrap: nowrap;
 }
 
 /* Japanese language specific styles */

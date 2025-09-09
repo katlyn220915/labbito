@@ -370,24 +370,38 @@ body.menu-open {
     display: none;
   }
 
-  .designer__card::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 20px;
-    width: 80%;
-    height: 150px;
-    background-color: var(--color-white);
-    transform: translateX(-50%);
-    z-index: -1;
+  .designer__photo {
+    transform: translateY(15px);
   }
 
   .designer__info {
-    padding: var(--spacing-xxl) 0;
+    height: 150px;
   }
 
   .designer__info::after {
-    height: 50%;
+    height: 60px;
+    top: 36px;
+  }
+
+  .carousel__content::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: var(--spacing-lg);
+    width: 90%;
+    height: 180px;
+    background-color: var(--color-white);
+    transform: translateX(-50%);
+    z-index: 1;
+    border-radius: var(--border-radius);
+  }
+
+  .designer__title {
+    font-size: 1rem;
+  }
+
+  .designer__name {
+    font-size: 1.2rem;
   }
 
   .designers__carousel {
@@ -399,6 +413,10 @@ body.menu-open {
   }
 
   /* Fix carousel buttons on mobile */
+
+  .carousel__nav {
+    top: 35%;
+  }
   .carousel__nav--prev {
     left: 10px;
   }
@@ -414,6 +432,24 @@ body.menu-open {
 
   .brand__logo {
     width: 150px;
+  }
+
+  .slogan-text {
+    font-size: 1.8rem;
+  }
+
+  .contact__container {
+    padding: 0;
+  }
+
+  .contact__info {
+    padding: 0 var(--spacing-lg);
+  }
+
+  .carousel__content::before {
+    width: 95%;
+    height: 156px;
+    bottom: var(--spacing-lg);
   }
 }
 
@@ -475,6 +511,11 @@ body.menu-open {
     bottom: 0;
   }
 
+  .designer__info {
+    height: 150px;
+    padding: var(--spacing-md);
+  }
+
   .mascot {
     margin-top: var(--spacing-lg);
   }
@@ -509,14 +550,8 @@ body.menu-open {
     right: 5px;
   }
 
-  .slogan-text {
+  html[lang='ja'] .slogan-text {
     font-size: 1.5rem;
-  }
-
-  /* Contact Section*/
-  .contact__content {
-    flex-direction: column;
-    gap: var(--spacing-lg);
   }
 
   .location__logo {
