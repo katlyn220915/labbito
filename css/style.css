@@ -557,6 +557,10 @@ ul {
   position: relative;
 }
 
+.service__table-price-empty {
+  text-align: center;
+}
+
 .service__table-price-unit {
   text-align: left;
   padding-left: var(--spacing-xs);
