@@ -437,6 +437,17 @@ body.menu-open {
   .hero__slogan {
     font-size: 0.9rem;
   }
+  .service__table-service {
+    padding: var(--spacing-xxs) var(--spacing-xxs);
+  }
+
+  .service__items {
+    padding: 10%;
+  }
+
+  .icon {
+    width: 30px;
+  }
 
   .designer__card::after {
     bottom: 0;
