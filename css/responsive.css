@@ -458,6 +458,10 @@ body.menu-open {
     padding: 10%;
   }
 
+  .service__item-title {
+    font-size: 1.2rem;
+  }
+
   .icon {
     width: 30px;
   }
