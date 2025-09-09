@@ -525,6 +525,25 @@ body.menu-open {
   .location__booking {
     align-self: center;
   }
+
+  .career__content {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .brand__card {
+    width: 160px;
+  }
+
+  .brand__subtitle,
+  .brand__title {
+    font-size: 1rem;
+    text-wrap: nowrap;
+  }
+
+  .brand__logo {
+    width: 120px;
+  }
 }
 
 /* Extra Small Mobile Styles */
