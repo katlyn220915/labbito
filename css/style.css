@@ -230,14 +230,14 @@ ul {
 }
 
 .scroll-icon {
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
   filter: brightness(0) invert(1);
 }
 
 .scroll-line {
   width: 1px;
-  height: 60px;
+  height: 160px;
   background-color: var(--color-white);
   opacity: 0.8;
 }
@@ -246,7 +246,7 @@ ul {
   writing-mode: vertical-rl;
   text-orientation: mixed;
   color: var(--color-white);
-  font-size: 12px;
+  font-size: 16px;
   font-weight: var(--font-weight-bold);
   letter-spacing: 2px;
   opacity: 0.9;
