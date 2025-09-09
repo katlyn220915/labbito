@@ -450,6 +450,10 @@ body.menu-open {
     height: 156px;
     bottom: var(--spacing-lg);
   }
+
+  .about__info-content {
+    padding: 0 40px;
+  }
 }
 
 /* Mobile Styles */
@@ -549,10 +553,6 @@ body.menu-open {
     right: 5px;
   }
 
-  html[lang='ja'] .slogan-text {
-    font-size: 1.5rem;
-  }
-
   .location__logo {
     width: 100px;
   }
@@ -582,6 +582,10 @@ body.menu-open {
 
   .brand__logo {
     width: 120px;
+  }
+
+  html[lang='ja'] .slogan-text {
+    font-size: 1.4rem;
   }
 }
 

@@ -158,15 +158,6 @@ ul {
   font-family: var(--font-handwriting-thin);
 }
 
-/* Japanese language specific fonts */
-html[lang='ja'] .text-handwriting-thin {
-  font-family: var(--font-handwriting);
-}
-
-html[lang='ja'] .service__table-price-empty {
-  transform: translateX(25%);
-}
-
 .color-white {
   color: var(--color-white);
 }
@@ -963,8 +954,17 @@ html[lang='ja'] .service__table-price-empty {
 }
 
 /* Japanese language specific styles */
-html[lang='ja'] .slogan-text {
+html[lang='ja'].slogan-text {
   font-size: 1.6rem;
+}
+
+html[lang='zh'] .text-handwriting {
+  font-family: var(--font-handwriting-thin);
+}
+
+/* Japanese language specific fonts */
+html[lang='ja'] .service__table-price-empty {
+  transform: translateX(25%);
 }
 
 .about__location {
