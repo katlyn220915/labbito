@@ -578,7 +578,7 @@ html[lang='ja'] .hidden-jp {
 }
 
 .service__table-price {
-  text-align: center;
+  text-align: right;
   vertical-align: middle;
   font-size: 1.1rem;
   color: var(--color-brown);
