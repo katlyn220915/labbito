@@ -62,6 +62,7 @@
   --font-weight-normal: 400;
   --font-weight-bold: 500;
 
+  --font-size-xsmall: 0.9rem;
   --font-size-small: 1rem;
   --font-size-medium: 1.2rem;
   --font-size-large: 1.4rem;
@@ -950,7 +951,6 @@ ul {
 .slogan-text {
   display: block;
   text-align: left;
-  text-wrap: nowrap;
 }
 
 /* Japanese language specific styles */
