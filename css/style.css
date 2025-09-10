@@ -962,6 +962,10 @@ html[lang='zh'] .text-handwriting {
   font-family: var(--font-handwriting-thin);
 }
 
+html[lang='ja'] .text-handwriting {
+  font-family: var(--font-handwriting);
+}
+
 /* Japanese language specific fonts */
 html[lang='ja'] .service__table-price-empty {
   transform: translateX(25%);

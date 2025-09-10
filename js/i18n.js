@@ -26,6 +26,7 @@ class I18n {
             
             this.updateContent();
             this.updateActiveLanguageButton();
+            this.updateDocumentLang();
             
             // Listen for browser back/forward button
             this.setupPopstateListener();
