@@ -573,6 +573,10 @@ body.menu-open {
     padding: 10%;
   }
 
+  .service__pricing-row--simple .service__pricing-price {
+    padding-left: 20px;
+  }
+
   .icon {
     width: 20px;
   }
