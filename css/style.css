@@ -124,6 +124,10 @@ ul {
   list-style: none;
 }
 
+html[lang='ja'] .hidden-jp {
+  display: none;
+}
+
 .hidden {
   display: none;
 }
@@ -603,7 +607,7 @@ ul {
 
 /* Designers Section */
 .designers {
-  padding: var(--spacing-md) 0;
+  padding: 150px 0;
   position: relative;
 }
 
@@ -612,7 +616,7 @@ ul {
   top: 0;
   left: 0;
   width: 100%;
-  height: 750px;
+  height: 800px;
   background-color: var(--color-cream);
   z-index: -1;
 }
@@ -698,7 +702,7 @@ ul {
   top: 28%;
   left: 28%;
   transform: translate(-25%);
-  width: 420px;
+  width: 450px;
   height: 180px;
   background-color: var(--color-white);
   z-index: -1;
@@ -714,7 +718,7 @@ ul {
   position: absolute;
   left: -1rem;
   top: 55%;
-  height: 50px;
+  height: 80%;
   transform: translateY(-50%);
 }
 
@@ -746,15 +750,15 @@ ul {
 
 .designer__photo {
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
 }
 
 .designer__photo::before {
   content: '';
+  width: 100%;
+  height: 100%;
   position: absolute;
-  width: 250px;
-  height: 250px;
   background-color: var(--color-primary-green);
   border-radius: 50%;
   right: -18px;
@@ -763,9 +767,8 @@ ul {
 }
 
 .designer__photo .designer__image-photo {
+  width: 100%;
   position: relative;
-  width: 250px;
-  width: 250px;
   border-radius: 50%;
   object-fit: cover;
   z-index: 2;
@@ -907,10 +910,10 @@ ul {
 
 .about__bg {
   position: absolute;
-  top: 125px;
+  top: 70px;
   left: 0;
   width: 100%;
-  height: 600px;
+  height: 655px;
   background-color: var(--color-cream);
   z-index: -1;
 }
@@ -943,7 +946,6 @@ ul {
 
 .about__info-content {
   max-width: 500px;
-  padding: 0 var(--spacing-md);
 }
 
 .about__info-text-slogan {
@@ -955,12 +957,10 @@ ul {
 .slogan-text {
   display: block;
   text-align: left;
+  font-size: 2.2rem;
 }
 
 /* Japanese language specific styles */
-html[lang='ja'].slogan-text {
-  font-size: 1.6rem;
-}
 
 html[lang='zh'] .text-handwriting {
   font-family: var(--font-handwriting-thin);
@@ -968,6 +968,10 @@ html[lang='zh'] .text-handwriting {
 
 html[lang='ja'] .text-handwriting {
   font-family: var(--font-handwriting);
+}
+
+html[lang='ja'] .slogan-text {
+  font-size: 1.6rem;
 }
 
 /* Japanese language specific fonts */
@@ -1182,17 +1186,15 @@ html[lang='ja'] .service__table-price-empty {
   display: flex;
   align-items: baseline;
   gap: var(--spacing-xs);
+  font-size: var(--font-size-small);
 }
 
 .contact__detail-label {
   color: var(--color-primary-green);
-  font-size: var(--font-size-small);
-  min-width: 100px;
 }
 
 .contact__detail-value {
   color: var(--color-primary-green);
-  font-size: var(--font-size-small);
 }
 
 .contact__social-media {

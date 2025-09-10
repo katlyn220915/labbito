@@ -108,7 +108,15 @@
     "contact": {
       "title": "聯絡我們",
       "phone": "電話",
-      "email": "Email"
+      "email": "Email",
+      "company_name": "公司名稱：",
+      "company_name.text": "圓可有限公司",
+      "tax_id": "統一編號：",
+      "tax_id.text": "24268837",
+      "email_address": "E-mail：",
+      "email_address.text": "labbitosalon@yahoo.com.tw",
+      "phone_number": "聯絡電話：",
+      "phone_number.text": "04-2302-0522"
     },
     "footer": {
       "copyright": "Copyright © LAbbito, All Rights Reserved."
@@ -228,13 +236,11 @@
       "title": "お問合せ",
       "phone": "電話番号",
       "email": "メール",
-      "company_name": "会社名",
+      "company_name": "会社名：",
       "company_name.text": "圓可有限公司",
-      "tax_id": "統一編号",
-      "tax_id.text": "24268837",
-      "email_address": "E-mail",
+      "email_address": "E-mail：",
       "email_address.text": "labbitosalon@yahoo.com.tw",
-      "phone_number": "電話番号",
+      "phone_number": "電話番号：",
       "phone_number.text": "04-2302-0522"
     },
     "footer": {

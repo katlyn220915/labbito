@@ -220,7 +220,7 @@ body.menu-open {
 
   .slogan-text {
     display: block;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 
   html[lang='ja'] .slogan-text {
@@ -314,7 +314,7 @@ body.menu-open {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: var(--spacing-xxl);
+    gap: var(--spacing-md);
   }
 
   .header__salon-handwrite {
@@ -381,12 +381,12 @@ body.menu-open {
   }
 
   .designer__info {
-    height: 150px;
+    height: 90px;
   }
 
   .designer__info::after {
-    height: 60px;
-    top: 43px;
+    height: 53px;
+    top: 33px;
   }
 
   .carousel__content::before {
@@ -416,6 +416,7 @@ body.menu-open {
 
   .designer__gallery {
     margin-top: var(--spacing-xxl);
+    grid-template-columns: repeat(2, 180px);
   }
 
   .about__bg {
@@ -455,10 +456,6 @@ body.menu-open {
     height: 156px;
     bottom: var(--spacing-lg);
   }
-
-  .designer__gallery {
-    grid-template-columns: repeat(2, 170px);
-  }
 }
 
 /* Mobile Styles */
@@ -492,7 +489,7 @@ body.menu-open {
 
   /* Hero Section*/
   .hero__slogan {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .service__category-title {
@@ -527,7 +524,12 @@ body.menu-open {
   }
 
   .icon {
-    width: 30px;
+    width: 20px;
+  }
+
+  .designer__gallery {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 20px;
   }
 
   .designer__card::after {
@@ -535,7 +537,6 @@ body.menu-open {
   }
 
   .designer__info {
-    height: 150px;
     padding: var(--spacing-md);
   }
 
@@ -574,11 +575,16 @@ body.menu-open {
   }
 
   .slogan-text {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+  }
+
+  .location__label,
+  .location__value {
+    font-size: 0.9rem;
   }
 
   html[lang='ja'] .slogan-text {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
   }
 
   .location__logo {
@@ -596,6 +602,7 @@ body.menu-open {
   .career__content {
     justify-content: flex-start;
     align-items: flex-start;
+    gap: 0;
   }
 
   .brand__card {
@@ -618,6 +625,18 @@ body.menu-open {
 
   .scroll-line {
     height: 100px;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  .designer__info::after {
+    top: 43px;
+  }
+
+  .contact__detail-item {
+    font-size: 0.9rem;
   }
 }
 
