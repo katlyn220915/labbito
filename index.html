@@ -161,44 +161,28 @@
                   <img src="./assets/images/icons/scissors-green.png" alt="cut" class="icon" />
                 </div>
                 <div class="service__item-content">
-                  <table class="service__pricing-table">
-                    <tbody>
-                      <tr>
-                        <td
-                          class="service__table-service text-cjk"
-                          data-i18n="service.cut.stylist_haircut"
-                        >
-                          設計師剪髮 (含洗)
-                        </td>
-                        <td class="service__table-price"></td>
-                        <td class="service__table-price"></td>
-                        <td class="service__table-price">800</td>
-                        <td
-                          class="service__table-price service__table-price-unit"
-                          data-i18n="service.unit"
-                        >
-                          起
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="service__table-service text-cjk"
-                          data-i18n="service.cut.japanese_stylist_haircut"
-                        >
-                          日籍設計師剪髮 (含洗)
-                        </td>
-                        <td class="service__table-price"></td>
-                        <td class="service__table-price"></td>
-                        <td class="service__table-price">1600</td>
-                        <td
-                          class="service__table-price service__table-price-unit"
-                          data-i18n="service.unit"
-                        >
-                          起
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div class="service__pricing-grid">
+                    <div class="service__pricing-row--simple">
+                      <div
+                        class="service__pricing-service text-cjk"
+                        data-i18n="service.cut.stylist_haircut"
+                      >
+                        設計師剪髮 (含洗)
+                      </div>
+                      <div class="service__pricing-price">800&nbsp;</div>
+                      <div class="service__pricing-unit" data-i18n="service.unit">起</div>
+                    </div>
+                    <div class="service__pricing-row--simple">
+                      <div
+                        class="service__pricing-service text-cjk"
+                        data-i18n="service.cut.japanese_stylist_haircut"
+                      >
+                        日籍設計師剪髮 (含洗)
+                      </div>
+                      <div class="service__pricing-price">1600</div>
+                      <div class="service__pricing-unit" data-i18n="service.unit">起</div>
+                    </div>
+                  </div>
                 </div>
               </li>
 
@@ -217,71 +201,63 @@
                   <img src="./assets/images/icons/scissors-green.png" alt="cut" class="icon" />
                 </div>
                 <div class="service__item-content">
-                  <table class="service__pricing-table">
-                    <thead>
-                      <tr>
-                        <th class="service__table-header"></th>
-                        <th class="service__table-header text-cjk">S</th>
-                        <th class="service__table-header text-cjk">M</th>
-                        <th class="service__table-header text-cjk">L</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td
-                          class="service__table-service text-cjk"
-                          data-i18n="service.color.full_color"
-                        >
-                          單色染頭
-                        </td>
-                        <td class="service__table-price">2200</td>
-                        <td class="service__table-price">2400</td>
-                        <td class="service__table-price">2600</td>
-                        <td class="service__table-price-unit"></td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="service__table-service text-cjk"
-                          data-i18n="service.color.full_highlights"
-                        >
-                          全頭挑染
-                        </td>
-                        <td class="service__table-price">2200</td>
-                        <td class="service__table-price">2400</td>
-                        <td class="service__table-price">2600</td>
-                        <td class="service__table-price-unit"></td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="service__table-service text-cjk"
-                          data-i18n="service.color.design_highlights"
-                        >
-                          設計挑染
-                        </td>
-                        <td class="service__table-price">900</td>
-                        <td class="service__table-price">1000</td>
-                        <td class="service__table-price">1100</td>
-                        <td class="service__table-price-unit"></td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="service__table-service text-cjk"
-                          data-i18n="service.color.retouch_color"
-                        >
-                          髮根補色
-                        </td>
-                        <td class="service__table-price service__table-price-empty">-</td>
-                        <td class="service__table-price service__table-price-empty">-</td>
-                        <td class="service__table-price">1500</td>
-                        <td
-                          class="service__table-price service__table-price-unit"
-                          data-i18n="service.unit"
-                        >
-                          起
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div class="service__pricing-grid">
+                    <div class="service__pricing-header">
+                      <div class="service__pricing-header-item"></div>
+                      <div class="service__pricing-header-item text-cjk">S</div>
+                      <div class="service__pricing-header-item text-cjk">M</div>
+                      <div class="service__pricing-header-item text-cjk">L</div>
+                      <div class="service__pricing-header-item"></div>
+                    </div>
+                    <div class="service__pricing-row">
+                      <div
+                        class="service__pricing-service text-cjk"
+                        data-i18n="service.color.full_color"
+                      >
+                        單色染頭
+                      </div>
+                      <div class="service__pricing-price">2200</div>
+                      <div class="service__pricing-price">2400</div>
+                      <div class="service__pricing-price">2600</div>
+                      <div class="service__pricing-unit"></div>
+                    </div>
+                    <div class="service__pricing-row">
+                      <div
+                        class="service__pricing-service text-cjk"
+                        data-i18n="service.color.full_highlights"
+                      >
+                        全頭挑染
+                      </div>
+                      <div class="service__pricing-price">2200</div>
+                      <div class="service__pricing-price">2400</div>
+                      <div class="service__pricing-price">2600</div>
+                      <div class="service__pricing-unit"></div>
+                    </div>
+                    <div class="service__pricing-row">
+                      <div
+                        class="service__pricing-service text-cjk"
+                        data-i18n="service.color.design_highlights"
+                      >
+                        設計挑染
+                      </div>
+                      <div class="service__pricing-price">900</div>
+                      <div class="service__pricing-price">1000</div>
+                      <div class="service__pricing-price">1100</div>
+                      <div class="service__pricing-unit"></div>
+                    </div>
+                    <div class="service__pricing-row">
+                      <div
+                        class="service__pricing-service text-cjk"
+                        data-i18n="service.color.retouch_color"
+                      >
+                        髮根補色
+                      </div>
+                      <div class="service__pricing-price service__pricing-price--empty">-</div>
+                      <div class="service__pricing-price service__pricing-price--empty">-</div>
+                      <div class="service__pricing-price">1500</div>
+                      <div class="service__pricing-unit" data-i18n="service.unit">起</div>
+                    </div>
+                  </div>
                 </div>
               </li>
 
@@ -300,54 +276,51 @@
                   <img src="./assets/images/icons/scissors-green.png" alt="perm" class="icon" />
                 </div>
                 <div class="service__item-content">
-                  <table class="service__pricing-table">
-                    <thead>
-                      <tr>
-                        <th class="service__table-header"></th>
-                        <th class="service__table-header text-cjk">S</th>
-                        <th class="service__table-header text-cjk">M</th>
-                        <th class="service__table-header text-cjk">L</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td
-                          class="service__table-service text-cjk"
-                          data-i18n="service.perm.cold_perm"
-                        >
-                          冷燙燙捲
-                        </td>
-                        <td class="service__table-price">2200</td>
-                        <td class="service__table-price">2400</td>
-                        <td class="service__table-price">2600</td>
-                        <td class="service__table-price-unit"></td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="service__table-service text-cjk"
-                          data-i18n="service.perm.warm_perm"
-                        >
-                          溫塑燙捲
-                        </td>
-                        <td class="service__table-price">3000</td>
-                        <td class="service__table-price">3200</td>
-                        <td class="service__table-price">3400</td>
-                        <td class="service__table-price-unit"></td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="service__table-service text-cjk"
-                          data-i18n="service.perm.digital_perm"
-                        >
-                          熱塑燙捲
-                        </td>
-                        <td class="service__table-price">3300</td>
-                        <td class="service__table-price">3500</td>
-                        <td class="service__table-price">3700</td>
-                        <td class="service__table-price-unit"></td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div class="service__pricing-grid">
+                    <div class="service__pricing-header">
+                      <div class="service__pricing-header-item"></div>
+                      <div class="service__pricing-header-item text-cjk">S</div>
+                      <div class="service__pricing-header-item text-cjk">M</div>
+                      <div class="service__pricing-header-item text-cjk">L</div>
+                      <div class="service__pricing-header-item"></div>
+                    </div>
+                    <div class="service__pricing-row">
+                      <div
+                        class="service__pricing-service text-cjk"
+                        data-i18n="service.perm.cold_perm"
+                      >
+                        冷燙燙捲
+                      </div>
+                      <div class="service__pricing-price">2200</div>
+                      <div class="service__pricing-price">2400</div>
+                      <div class="service__pricing-price">2600</div>
+                      <div class="service__pricing-unit"></div>
+                    </div>
+                    <div class="service__pricing-row">
+                      <div
+                        class="service__pricing-service text-cjk"
+                        data-i18n="service.perm.warm_perm"
+                      >
+                        溫塑燙捲
+                      </div>
+                      <div class="service__pricing-price">3000</div>
+                      <div class="service__pricing-price">3200</div>
+                      <div class="service__pricing-price">3400</div>
+                      <div class="service__pricing-unit"></div>
+                    </div>
+                    <div class="service__pricing-row">
+                      <div
+                        class="service__pricing-service text-cjk"
+                        data-i18n="service.perm.digital_perm"
+                      >
+                        熱塑燙捲
+                      </div>
+                      <div class="service__pricing-price">3300</div>
+                      <div class="service__pricing-price">3500</div>
+                      <div class="service__pricing-price">3700</div>
+                      <div class="service__pricing-unit"></div>
+                    </div>
+                  </div>
                 </div>
               </li>
 
@@ -366,47 +339,39 @@
                   <img src="./assets/images/icons/scissors-green.png" alt="straight" class="icon" />
                 </div>
                 <div class="service__item-content">
-                  <table class="service__pricing-table">
-                    <thead>
-                      <tr>
-                        <th class="service__table-header"></th>
-                        <th class="service__table-header text-cjk">S</th>
-                        <th class="service__table-header text-cjk">M</th>
-                        <th class="service__table-header text-cjk">L</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td
-                          class="service__table-service text-cjk"
-                          data-i18n="service.straight.straight_perm"
-                        >
-                          燙直 (縮毛矯正)
-                        </td>
-                        <td class="service__table-price">2800</td>
-                        <td class="service__table-price">3100</td>
-                        <td class="service__table-price">3400</td>
-                        <td class="service__table-price-unit"></td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="service__table-service text-cjk"
-                          data-i18n="service.straight.root_straight"
-                        >
-                          髮根燙直
-                        </td>
-                        <td class="service__table-price service__table-price-empty">-</td>
-                        <td class="service__table-price service__table-price-empty">-</td>
-                        <td class="service__table-price">2500</td>
-                        <td
-                          class="service__table-price service__table-price-unit"
-                          data-i18n="service.unit"
-                        >
-                          起
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div class="service__pricing-grid">
+                    <div class="service__pricing-header">
+                      <div class="service__pricing-header-item"></div>
+                      <div class="service__pricing-header-item text-cjk">S</div>
+                      <div class="service__pricing-header-item text-cjk">M</div>
+                      <div class="service__pricing-header-item text-cjk">L</div>
+                      <div class="service__pricing-header-item"></div>
+                    </div>
+                    <div class="service__pricing-row">
+                      <div
+                        class="service__pricing-service text-cjk"
+                        data-i18n="service.straight.straight_perm"
+                      >
+                        燙直 (縮毛矯正)
+                      </div>
+                      <div class="service__pricing-price">2800</div>
+                      <div class="service__pricing-price">3100</div>
+                      <div class="service__pricing-price">3400</div>
+                      <div class="service__pricing-unit"></div>
+                    </div>
+                    <div class="service__pricing-row">
+                      <div
+                        class="service__pricing-service text-cjk"
+                        data-i18n="service.straight.root_straight"
+                      >
+                        髮根燙直
+                      </div>
+                      <div class="service__pricing-price service__pricing-price--empty">-</div>
+                      <div class="service__pricing-price service__pricing-price--empty">-</div>
+                      <div class="service__pricing-price">2500</div>
+                      <div class="service__pricing-unit" data-i18n="service.unit">起</div>
+                    </div>
+                  </div>
                 </div>
               </li>
 
@@ -429,42 +394,39 @@
                   />
                 </div>
                 <div class="service__item-content">
-                  <table class="service__pricing-table">
-                    <thead>
-                      <tr>
-                        <th class="service__table-header"></th>
-                        <th class="service__table-header text-cjk">S</th>
-                        <th class="service__table-header text-cjk">M</th>
-                        <th class="service__table-header text-cjk">L</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td
-                          class="service__table-service text-cjk"
-                          data-i18n="service.treatment.deep_conditioning"
-                        >
-                          深層護髮
-                        </td>
-                        <td class="service__table-price">1000</td>
-                        <td class="service__table-price">1200</td>
-                        <td class="service__table-price">1400</td>
-                        <td class="service__table-price-unit"></td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="service__table-service text-cjk"
-                          data-i18n="service.treatment.repair_restorative"
-                        >
-                          髮質修護
-                        </td>
-                        <td class="service__table-price">1200</td>
-                        <td class="service__table-price">1500</td>
-                        <td class="service__table-price">1800</td>
-                        <td class="service__table-price-unit"></td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div class="service__pricing-grid">
+                    <div class="service__pricing-header">
+                      <div class="service__pricing-header-item"></div>
+                      <div class="service__pricing-header-item text-cjk">S</div>
+                      <div class="service__pricing-header-item text-cjk">M</div>
+                      <div class="service__pricing-header-item text-cjk">L</div>
+                      <div class="service__pricing-header-item"></div>
+                    </div>
+                    <div class="service__pricing-row">
+                      <div
+                        class="service__pricing-service text-cjk"
+                        data-i18n="service.treatment.deep_conditioning"
+                      >
+                        深層護髮
+                      </div>
+                      <div class="service__pricing-price">1000</div>
+                      <div class="service__pricing-price">1200</div>
+                      <div class="service__pricing-price">1400</div>
+                      <div class="service__pricing-unit"></div>
+                    </div>
+                    <div class="service__pricing-row">
+                      <div
+                        class="service__pricing-service text-cjk"
+                        data-i18n="service.treatment.repair_restorative"
+                      >
+                        髮質修護
+                      </div>
+                      <div class="service__pricing-price">1200</div>
+                      <div class="service__pricing-price">1500</div>
+                      <div class="service__pricing-price">1800</div>
+                      <div class="service__pricing-unit"></div>
+                    </div>
+                  </div>
                   <div class="service__note text-cjk" data-i18n="service.treatment.discount_note">
                     ※染/燙搭配護髮可折抵200元
                   </div>
@@ -486,108 +448,87 @@
                   <img src="./assets/images/icons/scissors-green.png" alt="other" class="icon" />
                 </div>
                 <div class="service__item-content">
-                  <table class="service__pricing-table">
-                    <thead>
-                      <tr>
-                        <th class="service__table-header"></th>
-                        <th class="service__table-header text-cjk">S</th>
-                        <th class="service__table-header text-cjk">M</th>
-                        <th class="service__table-header text-cjk">L</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td
-                          class="service__table-service text-cjk"
-                          data-i18n="service.other.head_spa"
-                        >
-                          頭皮護理
-                        </td>
-                        <td class="service__table-price">800</td>
-                        <td class="service__table-price">800</td>
-                        <td class="service__table-price">1000</td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="service__table-service text-cjk"
-                          data-i18n="service.other.shampoo_blowdry"
-                        >
-                          洗髮
-                        </td>
-                        <td class="service__table-price service__table-price-empty">-</td>
-                        <td class="service__table-price service__table-price-empty">-</td>
-                        <td class="service__table-price">400</td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="service__table-service text-cjk"
-                          data-i18n="service.other.half_hair_setup"
-                        >
-                          半頭造型
-                        </td>
-                        <td class="service__table-price service__table-price-empty">-</td>
-                        <td class="service__table-price service__table-price-empty">-</td>
-                        <td class="service__table-price">800</td>
-                        <td
-                          class="service__table-price service__table-price-unit"
-                          data-i18n="service.unit"
-                        >
-                          起
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="service__table-service text-cjk"
-                          data-i18n="service.other.full_hair_setup"
-                        >
-                          整頭造型
-                        </td>
-                        <td class="service__table-price service__table-price-empty">-</td>
-                        <td class="service__table-price service__table-price-empty">-</td>
-                        <td class="service__table-price">1000</td>
-                        <td
-                          class="service__table-price service__table-price-unit"
-                          data-i18n="service.unit"
-                        >
-                          起
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="service__table-service text-cjk"
-                          data-i18n="service.other.point_makeup"
-                        >
-                          重點妝
-                        </td>
-                        <td class="service__table-price service__table-price-empty">-</td>
-                        <td class="service__table-price service__table-price-empty">-</td>
-                        <td class="service__table-price">300</td>
-                        <td
-                          class="service__table-price service__table-price-unit"
-                          data-i18n="service.unit"
-                        >
-                          起
-                        </td>
-                      </tr>
-                      <tr>
-                        <td
-                          class="service__table-service text-cjk"
-                          data-i18n="service.other.full_makeup"
-                        >
-                          全妝
-                        </td>
-                        <td class="service__table-price service__table-price-empty">-</td>
-                        <td class="service__table-price service__table-price-empty">-</td>
-                        <td class="service__table-price">700</td>
-                        <td
-                          class="service__table-price service__table-price-unit"
-                          data-i18n="service.unit"
-                        >
-                          起
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div class="service__pricing-grid">
+                    <div class="service__pricing-header">
+                      <div class="service__pricing-header-item"></div>
+                      <div class="service__pricing-header-item text-cjk">S</div>
+                      <div class="service__pricing-header-item text-cjk">M</div>
+                      <div class="service__pricing-header-item text-cjk">L</div>
+                      <div class="service__pricing-header-item"></div>
+                    </div>
+                    <div class="service__pricing-row">
+                      <div
+                        class="service__pricing-service text-cjk"
+                        data-i18n="service.other.head_spa"
+                      >
+                        頭皮護理
+                      </div>
+                      <div class="service__pricing-price">800&nbsp;</div>
+                      <div class="service__pricing-price">800&nbsp;</div>
+                      <div class="service__pricing-price">1000</div>
+                      <div class="service__pricing-unit"></div>
+                    </div>
+                    <div class="service__pricing-row">
+                      <div
+                        class="service__pricing-service text-cjk"
+                        data-i18n="service.other.shampoo_blowdry"
+                      >
+                        洗髮
+                      </div>
+                      <div class="service__pricing-price service__pricing-price--empty">-</div>
+                      <div class="service__pricing-price service__pricing-price--empty">-</div>
+                      <div class="service__pricing-price">400</div>
+                      <div class="service__pricing-unit"></div>
+                    </div>
+                    <div class="service__pricing-row">
+                      <div
+                        class="service__pricing-service text-cjk"
+                        data-i18n="service.other.half_hair_setup"
+                      >
+                        半頭造型
+                      </div>
+                      <div class="service__pricing-price service__pricing-price--empty">-</div>
+                      <div class="service__pricing-price service__pricing-price--empty">-</div>
+                      <div class="service__pricing-price">800</div>
+                      <div class="service__pricing-unit" data-i18n="service.unit">起</div>
+                    </div>
+                    <div class="service__pricing-row">
+                      <div
+                        class="service__pricing-service text-cjk"
+                        data-i18n="service.other.full_hair_setup"
+                      >
+                        整頭造型
+                      </div>
+                      <div class="service__pricing-price service__pricing-price--empty">-</div>
+                      <div class="service__pricing-price service__pricing-price--empty">-</div>
+                      <div class="service__pricing-price">1000</div>
+                      <div class="service__pricing-unit" data-i18n="service.unit">起</div>
+                    </div>
+                    <div class="service__pricing-row">
+                      <div
+                        class="service__pricing-service text-cjk"
+                        data-i18n="service.other.point_makeup"
+                      >
+                        重點妝
+                      </div>
+                      <div class="service__pricing-price service__pricing-price--empty">-</div>
+                      <div class="service__pricing-price service__pricing-price--empty">-</div>
+                      <div class="service__pricing-price">300</div>
+                      <div class="service__pricing-unit" data-i18n="service.unit">起</div>
+                    </div>
+                    <div class="service__pricing-row">
+                      <div
+                        class="service__pricing-service text-cjk"
+                        data-i18n="service.other.full_makeup"
+                      >
+                        全妝
+                      </div>
+                      <div class="service__pricing-price service__pricing-price--empty">-</div>
+                      <div class="service__pricing-price service__pricing-price--empty">-</div>
+                      <div class="service__pricing-price">700</div>
+                      <div class="service__pricing-unit" data-i18n="service.unit">起</div>
+                    </div>
+                  </div>
                 </div>
               </li>
             </ul>
@@ -625,7 +566,7 @@
                       <span class="designer__name text-cjk">藤森篤</span>
                     </h3>
                     <a href="https://www.instagram.com/labbitosalon/" class="designer__handle">
-                      作品集 <span class="ig_account">@labbitosalon</span>
+                      作品集 <span class="ig_account text-serif">@labbitosalon</span>
                       <img
                         src="./assets/images/icons/instagram.png"
                         alt="Instagram"
@@ -654,7 +595,7 @@
                       href="https://www.instagram.com/flora_labbito?igsh=aXZvMG9jcTdoOHA="
                       class="designer__handle"
                     >
-                      作品集 <span class="ig_account">@flora_labbito</span>
+                      作品集 <span class="ig_account text-serif">@flora_labbito</span>
                       <img
                         src="./assets/images/icons/instagram.png"
                         alt="Instagram"
@@ -683,7 +624,7 @@
                       href="https://www.instagram.com/haler_labbitohairsalon?igsh=Nm5scjN6eG9yOHdk"
                       class="designer__handle"
                     >
-                      作品集 <span class="ig_account">@haler_labbitohairsalon</span>
+                      作品集 <span class="ig_account text-serif">@haler_labbitohairsalon</span>
                       <img
                         src="./assets/images/icons/instagram.png"
                         alt="Instagram"
@@ -707,7 +648,7 @@
                       <span class="designer__name text-cjk">Nana</span>
                     </h3>
                     <a href="https://www.instagram.com/labbitosalon/" class="designer__handle">
-                      作品集 <span class="ig_account">@labbitosalon</span>
+                      作品集 <span class="ig_account text-serif">@labbitosalon</span>
                       <img
                         src="./assets/images/icons/instagram.png"
                         alt="Instagram"
@@ -731,7 +672,7 @@
                       <span class="designer__name text-cjk">Caleb</span>
                     </h3>
                     <a href="https://www.instagram.com/caleb_color" class="designer__handle">
-                      作品集 <span class="ig_account">@caleb_color</span>
+                      作品集 <span class="ig_account text-serif">@caleb_color</span>
                       <img
                         src="./assets/images/icons/instagram.png"
                         alt="Instagram"

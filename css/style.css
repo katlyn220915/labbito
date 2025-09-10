@@ -530,94 +530,78 @@ html[lang='ja'] .hidden-jp {
   width: 96px;
 }
 
-.service__pricing-table {
+/* Grid-based pricing layout */
+.service__pricing-grid {
   width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed; /* 固定表格佈局 */
-  /* margin-top: var(--spacing-md); */
   font-family: var(--font-cjk);
 }
 
-.service__table-header {
+.service__pricing-header {
+  display: grid;
+  grid-template-columns: 1fr 60px 60px 60px 30px;
+  gap: var(--spacing-sm);
+}
+
+.service__pricing-header-item {
   text-align: center;
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-normal);
   color: var(--color-primary-green);
-  padding-bottom: var(--spacing-sm);
+  padding-left: 15px;
 }
 
-.service__table-header:first-child {
-  text-align: left;
-  width: 45%; /* 服務項目欄位寬度 */
-}
-
-.service__table-header:nth-child(2) {
-  width: 15%; /* S 欄位寬度 */
-}
-
-.service__table-header:nth-child(3) {
-  width: 15%; /* M 欄位寬度 */
-}
-
-.service__table-header:nth-child(4) {
-  width: 15%; /* L 欄位寬度 */
-}
-
-.service__table-header:nth-child(5) {
-  width: 10%; /* 單位欄位寬度 */
-}
-
-.service__table-service {
-  padding: var(--spacing-xs) var(--spacing-sm);
-  text-align: left;
-  font-size: 1.1rem;
-  color: var(--color-text-primary);
-  word-wrap: break-word; /* 自動換行 */
-  overflow-wrap: break-word;
-  width: 45%; /* 與 header 一致 */
-}
-
-.service__table-price {
-  text-align: right;
-  vertical-align: middle;
-  font-size: 1.1rem;
-  color: var(--color-brown);
-  font-weight: var(--font-weight-bold);
-  position: relative;
-  padding: var(--spacing-xs) var(--spacing-sm);
-  width: 15%; /* 固定寬度 */
-}
-
-.service__table-price-empty {
-  text-align: center;
-}
-
-.service__table-price-unit {
-  text-align: left;
-  padding-left: var(--spacing-xs);
-  width: 10%; /* 調整單位欄位寬度 */
-}
-
-/* 確保表格行的一致性 */
-.service__pricing-table tr {
-  height: auto;
+.service__pricing-row {
+  display: grid;
+  grid-template-columns: 1fr 60px 60px 60px 30px;
+  gap: var(--spacing-sm);
+  align-items: center;
+  padding: var(--spacing-xs) 0;
   min-height: 40px;
 }
 
-.service__pricing-table td,
-.service__pricing-table th {
-  vertical-align: top;
-  padding: var(--spacing-xs) var(--spacing-sm);
+.service__pricing-row:not(:last-child) {
+  border-bottom: none;
 }
 
-/* 針對只有一個價格欄位的表格（如剪髮區塊）調整寬度 */
-.service__pricing-table td:nth-child(2):nth-last-child(3),
-.service__pricing-table td:nth-child(3):nth-last-child(2) {
-  width: 20%;
+.service__pricing-service {
+  text-align: left;
+  font-size: 1.1rem;
+  color: var(--color-text-primary);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding-right: var(--spacing-sm);
 }
 
-.service__pricing-table td:nth-child(4):nth-last-child(1) {
-  width: 15%;
+.service__pricing-price {
+  text-align: right;
+  font-size: 1.1rem;
+  color: var(--color-brown);
+  font-weight: var(--font-weight-bold);
+  width: 60px;
+  padding: 0;
+}
+
+.service__pricing-price--empty {
+  text-align: center;
+  padding-left: 30%;
+}
+
+.service__pricing-unit {
+  text-align: left;
+  font-size: 1.1rem;
+  color: var(--color-brown);
+  font-weight: var(--font-weight-bold);
+  min-width: 30px;
+}
+
+/* Simple grid for cut services (no header, just service + price + unit) */
+.service__pricing-row--simple {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: var(--spacing-md);
+  align-items: center;
+  padding: var(--spacing-xs) 0;
+  min-height: 40px;
 }
 
 .service__category-title {
@@ -650,7 +634,7 @@ html[lang='ja'] .hidden-jp {
 
 /* Designers Section */
 .designers {
-  padding: 150px 0;
+  padding: 80px 0;
   position: relative;
 }
 
