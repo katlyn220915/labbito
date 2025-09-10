@@ -315,6 +315,8 @@ body.menu-open {
     align-items: center;
     justify-content: center;
     gap: var(--spacing-md);
+
+    margin-top: var(--spacing-xxl);
   }
 
   .header__salon-handwrite {
