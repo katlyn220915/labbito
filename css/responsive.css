@@ -611,6 +611,10 @@ body.menu-open {
   .carousel__content::before {
     width: 90%;
   }
+
+  .scroll-line {
+    height: 100px;
+  }
 }
 
 /* Extra Small Mobile Styles */
