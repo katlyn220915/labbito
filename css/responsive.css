@@ -491,20 +491,35 @@ body.menu-open {
     font-size: 0.9rem;
   }
 
-  .service__table-header {
-    padding-right: 30px;
+  .service__category-title {
+    font-size: 1.5rem;
   }
 
-  .service__table-service {
-    padding: var(--spacing-xxs) var(--spacing-xxs);
+  .service__item-title {
+    font-size: 1rem;
+  }
+
+  .service__table-header {
+    padding-right: 30px;
+    font-size: 0.8rem;
+  }
+
+  .service__table-service,
+  .service__table-price {
+    font-size: 0.8rem;
+    padding: var(--spacing-xxs) var(--spacing-md);
+  }
+
+  .service__table-price-unit {
+    padding-left: 0;
+  }
+
+  .service__note {
+    font-size: 0.8rem;
   }
 
   .service__items {
     padding: 10%;
-  }
-
-  .service__item-title {
-    font-size: 1.2rem;
   }
 
   .icon {

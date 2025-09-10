@@ -124,6 +124,10 @@ ul {
   list-style: none;
 }
 
+.hidden {
+  display: none;
+}
+
 /* search engine only*/
 
 .sr-only {

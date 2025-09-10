@@ -28,6 +28,11 @@ class I18n {
             this.updateActiveLanguageButton();
             this.updateDocumentLang();
             
+            // Update language switcher options
+            if (window.updateLanguageOptions) {
+                window.updateLanguageOptions();
+            }
+            
             // Listen for browser back/forward button
             this.setupPopstateListener();
         } catch (error) {
