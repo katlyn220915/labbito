@@ -533,6 +533,7 @@ html[lang='ja'] .hidden-jp {
 .service__pricing-table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed; /* 固定表格佈局 */
   /* margin-top: var(--spacing-md); */
   font-family: var(--font-cjk);
 }
@@ -542,13 +543,28 @@ html[lang='ja'] .hidden-jp {
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-normal);
   color: var(--color-primary-green);
-  transform: translateX(25%);
   padding-bottom: var(--spacing-sm);
 }
 
 .service__table-header:first-child {
   text-align: left;
-  width: 40%;
+  width: 45%; /* 服務項目欄位寬度 */
+}
+
+.service__table-header:nth-child(2) {
+  width: 15%; /* S 欄位寬度 */
+}
+
+.service__table-header:nth-child(3) {
+  width: 15%; /* M 欄位寬度 */
+}
+
+.service__table-header:nth-child(4) {
+  width: 15%; /* L 欄位寬度 */
+}
+
+.service__table-header:nth-child(5) {
+  width: 10%; /* 單位欄位寬度 */
 }
 
 .service__table-service {
@@ -556,15 +572,20 @@ html[lang='ja'] .hidden-jp {
   text-align: left;
   font-size: 1.1rem;
   color: var(--color-text-primary);
+  word-wrap: break-word; /* 自動換行 */
+  overflow-wrap: break-word;
+  width: 45%; /* 與 header 一致 */
 }
 
 .service__table-price {
-  text-align: right;
+  text-align: center;
   vertical-align: middle;
   font-size: 1.1rem;
   color: var(--color-brown);
   font-weight: var(--font-weight-bold);
   position: relative;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  width: 15%; /* 固定寬度 */
 }
 
 .service__table-price-empty {
@@ -574,7 +595,29 @@ html[lang='ja'] .hidden-jp {
 .service__table-price-unit {
   text-align: left;
   padding-left: var(--spacing-xs);
-  width: 50px;
+  width: 10%; /* 調整單位欄位寬度 */
+}
+
+/* 確保表格行的一致性 */
+.service__pricing-table tr {
+  height: auto;
+  min-height: 40px;
+}
+
+.service__pricing-table td,
+.service__pricing-table th {
+  vertical-align: top;
+  padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+/* 針對只有一個價格欄位的表格（如剪髮區塊）調整寬度 */
+.service__pricing-table td:nth-child(2):nth-last-child(3),
+.service__pricing-table td:nth-child(3):nth-last-child(2) {
+  width: 20%;
+}
+
+.service__pricing-table td:nth-child(4):nth-last-child(1) {
+  width: 15%;
 }
 
 .service__category-title {
