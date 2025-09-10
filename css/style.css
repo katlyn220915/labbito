@@ -191,7 +191,7 @@ html[lang='ja'] .hidden-jp {
 
 .section-header {
   display: flex;
-  align-items: baseline;
+  align-items: flex-end;
   gap: var(--spacing-sm);
 }
 
