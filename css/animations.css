@@ -259,39 +259,49 @@
   }
 
   /* Mobile section animations - optimized for performance */
-  .animate-section,
+  .animate-section {
+    transform: none;
+    transition: opacity 0.4s ease-out;
+    will-change: opacity;
+  }
+
+  .animate-section.fade-in {
+    transform: none;
+  }
+  
   .animate-on-scroll {
-    transform: translateY(15px);
-    transition-duration: 0.4s;
-    transition-timing-function: ease-out;
+    transform: none;
+    transition: opacity 0.3s ease-out;
+    will-change: opacity;
+  }
+
+  .animate-on-scroll.fade-in {
+    transform: none;
+  }
+  
+  /* Special animation for mascot image on mobile */
+  .mascot__image-photo.animate-on-scroll {
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transition-delay: 0.5s;
     will-change: transform, opacity;
   }
 
-  .animate-section.fade-in,
-  .animate-on-scroll.fade-in {
+  .mascot__image-photo.animate-on-scroll.fade-in {
     transform: translateY(0);
   }
   
-  /* Disable complex animations on very small devices for better performance */
-  @media (max-width: 480px) and (max-height: 800px) {
+  /* Lighter animations for very small devices */
+  @media (max-width: 320px) and (max-height: 600px) {
     .animate-section,
     .animate-on-scroll {
       transform: none;
-      transition-duration: 0.2s;
+      transition: opacity 0.3s ease-out;
     }
     
     .animate-section.fade-in,
     .animate-on-scroll.fade-in {
       transform: none;
-    }
-    
-    /* Only animate opacity for better performance */
-    .animate-section {
-      transition-property: opacity;
-    }
-    
-    .animate-on-scroll {
-      transition-property: opacity;
     }
   }
 }

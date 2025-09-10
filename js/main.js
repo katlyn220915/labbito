@@ -146,10 +146,11 @@ function initSmoothScrolling() {
 function initScrollAnimations() {
   // Check if device supports animations well (not low-end mobile)
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const isLowEndDevice = window.innerWidth <= 480 && window.innerHeight <= 800;
+  const isMobile = window.innerWidth <= 768;
+  const isVeryLowEndDevice = window.innerWidth <= 320 && window.innerHeight <= 600;
   
-  if (prefersReducedMotion || isLowEndDevice) {
-    // Simply show all elements for low-end devices or users who prefer reduced motion
+  if (prefersReducedMotion || isVeryLowEndDevice) {
+    // Simply show all elements for very low-end devices or users who prefer reduced motion
     document.querySelectorAll('.animate-section, .animate-on-scroll').forEach(el => {
       el.classList.add('fade-in');
     });
@@ -194,7 +195,7 @@ function initScrollAnimations() {
   });
 
   // Only observe individual elements on larger screens for better performance
-  if (window.innerWidth > 768) {
+  if (!isMobile) {
     const elementObserver = new IntersectionObserver(
       throttleCallback((entries) => {
         entries.forEach((entry) => {
