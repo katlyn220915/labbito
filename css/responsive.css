@@ -513,6 +513,11 @@ body.menu-open {
     padding: var(--spacing-xxs) var(--spacing-md);
   }
 
+  .service__table-service {
+    max-width: 120px;
+    min-width: 100px;
+  }
+
   .service__table-price-unit {
     padding-left: 0;
   }
@@ -540,6 +545,10 @@ body.menu-open {
 
   .designer__info {
     padding: var(--spacing-md);
+  }
+
+  .ig_account {
+    font-size: 0.8rem;
   }
 
   .mascot {
