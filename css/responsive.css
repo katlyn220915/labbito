@@ -386,7 +386,7 @@ body.menu-open {
 
   .designer__info::after {
     height: 60px;
-    top: 36px;
+    top: 43px;
   }
 
   .carousel__content::before {
@@ -606,6 +606,10 @@ body.menu-open {
 
   .brand__logo {
     width: 120px;
+  }
+
+  .carousel__content::before {
+    width: 90%;
   }
 }
 
