@@ -218,10 +218,32 @@ function initScrollAnimations() {
       elementObserver.observe(element);
     });
   } else {
-    // On mobile, simply show all individual elements to avoid performance issues
+    // On mobile, show all individual elements except mascot image
     document.querySelectorAll('.animate-on-scroll').forEach(el => {
-      el.classList.add('fade-in');
+      // Keep mascot animation on mobile
+      if (!el.classList.contains('mascot__image-photo')) {
+        el.classList.add('fade-in');
+      }
     });
+    
+    // Create a simple observer for mascot image on mobile
+    const mascotImage = document.querySelector('.mascot__image-photo.animate-on-scroll');
+    if (mascotImage) {
+      const mascotObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('fade-in');
+            }
+          });
+        },
+        {
+          threshold: 0.3,
+          rootMargin: '0px 0px -50px 0px',
+        }
+      );
+      mascotObserver.observe(mascotImage);
+    }
   }
 }
 

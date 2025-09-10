@@ -455,6 +455,10 @@ body.menu-open {
     height: 156px;
     bottom: var(--spacing-lg);
   }
+
+  .designer__gallery {
+    grid-template-columns: repeat(2, 170px);
+  }
 }
 
 /* Mobile Styles */

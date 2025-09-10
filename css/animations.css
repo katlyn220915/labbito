@@ -303,6 +303,18 @@
     .animate-on-scroll.fade-in {
       transform: none;
     }
+    
+    /* Keep mascot animation even on very small devices */
+    .mascot__image-photo.animate-on-scroll {
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      transition-delay: 0.5s;
+      will-change: transform, opacity;
+    }
+
+    .mascot__image-photo.animate-on-scroll.fade-in {
+      transform: translateY(0);
+    }
   }
 }
 
