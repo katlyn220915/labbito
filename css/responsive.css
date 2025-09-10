@@ -553,6 +553,7 @@ body.menu-open {
   .service__pricing-header-item {
     font-size: 0.8rem;
     width: 45px;
+    padding-left: 10px;
   }
 
   .service__pricing-header-item:first-child {
