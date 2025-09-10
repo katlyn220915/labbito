@@ -107,11 +107,6 @@ function initLanguageSwitcher() {
 
   // Expose updateLanguageOptions globally for i18n system
   window.updateLanguageOptions = updateLanguageOptions;
-  
-  // Set initial language display after a short delay to ensure i18n is initialized
-  setTimeout(() => {
-    updateLanguageOptions();
-  }, 100);
 }
 
 function initSmoothScrolling() {
