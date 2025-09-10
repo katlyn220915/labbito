@@ -144,8 +144,6 @@
 .hero-animate {
   opacity: 0;
   animation: heroBlurFadeIn 1.2s ease-out forwards;
-  /* Ensure no filter is applied after animation */
-  filter: none;
 }
 
 .hero__logo-image.hero-animate {
